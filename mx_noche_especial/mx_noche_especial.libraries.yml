@@ -1,0 +1,15 @@
+global-styling:
+  version: 1.0
+  css:
+    theme:
+      dist/css/main.css: { attributes: { preload: true }, preprocess: false, minified: true }
+
+  js:
+    js/script.js: {}
+    dist/js/main.bundle.js: { attributes: { preload: true }, preprocess: false, minified: true }
+  dependencies:
+    - core/jquery
+    - core/jquery.once
+    - core/drupal
+    - core/drupal.ajax
+    - core/drupalSettings

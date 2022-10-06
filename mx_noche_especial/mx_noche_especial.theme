@@ -1,0 +1,11 @@
+<?php
+
+/**
+ * Implements hook_preprocess_page().
+ */
+function mx_noche_especial_preprocess(&$variables)
+{
+
+
+}
+

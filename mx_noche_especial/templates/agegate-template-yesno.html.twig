@@ -1,0 +1,108 @@
+<div
+	id="agv2" class="d-none cl-text-primary" style="display:none;">
+	{# State 01 / year #}
+	<section id="age-gate-01" class="agv2__container black left-layer active" style="background:url('{{ background_1 }}') #dfc481;">
+
+		<div class="agv2__wrapper">
+			<header>
+				<div class="agv2__brand">
+					<img src="{{ logo }}" alt="Logo Agegate" title="Logo Agegate">
+				</div>
+			</header>
+			<div class="form-age">
+
+        <div class="form-age__header">
+					<!--<p class="agv2__p bold">{{ description_year }}</p>-->
+					<p class="agv2__p">¿Eres mayor de edad?</p>
+				</div>
+
+
+
+				<div class="form-age__content">
+					<button class="age_gate_yes" data-qadp="age_gate_yes" onclick="validateFirstLoad()">{{"SÍ"|t}}</button>
+					<button class="age_gate_no" data-qadp="age_gate_no">{{"NO"|t}}</button></div>
+					{# load legal #}
+					<div class="legal__load">
+						<div class="agegate-legal">
+							<div class="agegate-legal__row">
+
+								<label class="agv2__checkbox">
+                  <span class="checkbox__input container-input">
+                      <input type="checkbox" name="checkbox" data-element="remember-date">
+                  </span>
+                  <span class="agv2__label">Recordar mis datos</span>
+                </label>
+
+							</div>
+							<div class="agegate-legal__row">
+
+								<p class="agv2__p small nunito">
+									*No selecciones esta opción si compartes este computador con menores de edad.
+									<br/>
+								</p>
+
+							</div>
+						</div>
+					</div>
+					{# load legal #}
+
+				</div>
+			</div>
+
+		</section>
+
+		{# legales #}
+
+		{# legales #}
+	</div>
+
+	{# example #}
+	<div class="agv2-animate" style="display: none">
+		<div class="top-layer"></div>
+		<div class="top-layer top-layer--2"></div>
+		<div class="top-layer top-layer--3"></div>
+		<div class="top-layer top-layer--4"></div>
+		<div class="top-layer top-layer--5"></div>
+		<div class="bottom-layer"></div>
+		<div class="bottom-layer bottom-layer--2"></div>
+		<div class="bottom-layer bottom-layer--3"></div>
+		<div class="left-layer"></div>
+		<div class="left-layer left-layer--2"></div>
+		<div class="left-layer left-layer--3"></div>
+		<div class="left-layer left-layer--4"></div>
+		<div class="right-layer"></div>
+		<div class="right-layer right-layer--2"></div>
+		<div class="right-layer right-layer--3"></div>
+		<div class="buttons">
+			<button id="top"><img src="https://icongr.am/feather/arrow-down.svg" alt="arrow-down" title="arrow-down"></button>
+			<button id="bottom"><img src="https://icongr.am/feather/arrow-up.svg" alt="arrow-up" title="arrow-up"></button>
+			<button id="left"><img src="https://icongr.am/feather/arrow-right.svg" alt="arrow-right" title="arrow-right"></button>
+			<button id="right"><img src="https://icongr.am/feather/arrow-left.svg" alt="arrow-left" title="arrow-left"></button>
+		</div>
+	</div>
+
+
+	<script type="text/javascript">
+
+		const buttons = document.getElementsByTagName("button");
+
+		for (const button of buttons) {
+			button.addEventListener('click', () => {
+				var id = button.getAttribute("id");
+				var layerClass = "." + id + "-layer";
+				var layers = document.querySelectorAll(layerClass);
+				for (const layer of layers) {
+					layer.classList.toggle("active");
+					}
+				}
+			);
+		}
+
+    window.validateFirstLoad = () => {
+      const pageLoad = localStorage.getItem('pageLoad');
+      if (!pageLoad) {
+        localStorage.setItem('pageLoad', '1');
+        location.reload()
+      }
+  }
+	</script>
