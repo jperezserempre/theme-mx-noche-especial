@@ -7,37 +7,18 @@ module.exports = {
   ],
   theme: {
     extend: {
+      backgroundImage: {
+        'button-primary': 'var(--bg-primary)'
+      },
       colors: {
-        black: 'var(--color-black)',
         primary: {
-          100: 'var(--color-primary-100)',
-          200: 'var(--color-primary-200)',
-          300: 'var(--color-primary-300)',
-          400: 'var(--color-primary-400)',
-          DEFAULT: 'var(--color-primary-500)',
-          600: 'var(--color-primary-600)',
-          700: 'var(--color-primary-700)',
-          800: 'var(--color-primary-800)',
-          900: 'var(--color-primary-900)',
-        },
-        secondary: {
-          100: 'var(--color-secondary-100)',
-          200: 'var(--color-secondary-200)',
-          300: 'var(--color-secondary-300)',
-          400: 'var(--color-secondary-400)',
-          DEFAULT: 'var(--color-secondary-500)',
-          600: 'var(--color-secondary-600)',
-          700: 'var(--color-secondary-700)',
-          800: 'var(--color-secondary-800)',
-          900: 'var(--color-secondary-900)',
+          DEFAULT: 'var(--color-primary-500)'
         },
       },
       fontFamily: {
-        sans: ['var(--font-family-primary)', ...defaultTheme.fontFamily.sans],
-        headline: [
-          'var(--font-family-secondary)',
-          ...defaultTheme.fontFamily.sans,
-        ],
+        primary: ['var(--font-family-primary)', ...defaultTheme.fontFamily.sans],
+        secondary: ['var(--font-family-secondary)',...defaultTheme.fontFamily.sans,],
+        third: ['var(--font-family-third)',...defaultTheme.fontFamily.sans,]
       },
       fontSize: {
         xs: 'var(--text-xs)',
@@ -50,6 +31,8 @@ module.exports = {
         '4xl': 'var(--text-4xl)',
         '5xl': 'var(--text-5xl)',
         '6xl': 'var(--text-6xl)',
+        '7xl': 'var(--text-7xl)',
+        '8xl': 'var(--text-8xl)',
       },
     },
   },

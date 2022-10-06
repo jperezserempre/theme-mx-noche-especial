@@ -2,14 +2,74 @@
   font-family: Roboto;
   font-style: normal;
   font-weight: 400;
-  src: url('../../sources/fonts/Roboto-Regular.woff2') format('woff2'),
-    url('../../sources/fonts/Roboto-Regular.woff') format('woff');
+  src:  url('../../sources/fonts/Roboto-Regular.woff2') format('woff2'),
+        url('../../sources/fonts/Roboto-Regular.woff') format('woff');
 }
 
 @font-face {
   font-family: Rubik;
   font-style: normal;
   font-weight: 800;
-  src: url('../../sources/fonts/Rubik-Black.woff2') format('woff2'),
-    url('../../sources/fonts/Rubik-Black.woff') format('woff');
+  src:  url('../../sources/fonts/Rubik-Black.woff2') format('woff2'),
+        url('../../sources/fonts/Rubik-Black.woff') format('woff');
+}
+
+@font-face {
+  font-family: AbrahamLincoln;
+  font-style: normal;
+  font-weight: 400;
+  src:  url('../../sources/fonts/AbrahamLincoln.eot') format('eot'),
+        url('../../sources/fonts/AbrahamLincoln.woff') format('woff'),
+        url('../../sources/fonts/AbrahamLincoln.woff2') format('woff2'); 
+  font-display: swap;
+}
+
+@font-face {
+  font-family: MADEKenfolg;
+  font-style: normal;
+  font-weight: 400;
+  src:  url('../../sources/fonts/MADEKenfolgv2.otf') format('otf'),
+        url('../../sources/fonts/MADEKenfolgv2.woff') format('woff'),
+        url('../../sources/fonts/MADEKenfolgv2.woff2') format('woff2'); 
+  font-display: swap;
+}
+
+@font-face {
+  font-family: MuseoSans;
+  font-style: normal;
+  font-weight: 100;
+  src:  url('../../sources/fonts/MuseoSans-100.eot') format('eot'),
+        url('../../sources/fonts/MuseoSans-100.woff') format('woff'),
+        url('../../sources/fonts/MuseoSans-100.woff2') format('woff2'); 
+  font-display: swap;
+}
+
+@font-face {
+  font-family: MuseoSans;
+  font-style: normal;
+  font-weight: 300;
+  src:  url('../../sources/fonts/MuseoSans-300.eot') format('eot'),
+        url('../../sources/fonts/MuseoSans-300.woff') format('woff'),
+        url('../../sources/fonts/MuseoSans-300.woff2') format('woff2'); 
+  font-display: swap;
+}
+
+@font-face {
+  font-family: MuseoSans;
+  font-style: normal;
+  font-weight: 500;
+  src:  url('../../sources/fonts/MuseoSans-500.eot') format('eot'),
+        url('../../sources/fonts/MuseoSans-500.woff') format('woff'),
+        url('../../sources/fonts/MuseoSans-500.woff2') format('woff2'); 
+  font-display: swap;
+}
+
+@font-face {
+  font-family: MuseoSans;
+  font-style: normal;
+  font-weight: 700;
+  src:  url('../../sources/fonts/MuseoSans-700.eot') format('eot'),
+        url('../../sources/fonts/MuseoSans-700.woff') format('woff'),
+        url('../../sources/fonts/MuseoSans-700.woff2') format('woff2'); 
+  font-display: swap;
 }
