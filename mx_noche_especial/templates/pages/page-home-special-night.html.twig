@@ -7,7 +7,28 @@
 {{ component.banner.url_v_banner }}
 {# FIN COMPONENTE BANNER #}
 
+
+{# INICIO COMPONENTE FEATURES AND INGREDIENTS #}
+{{ component.features_ingredients.title_features }}
+{{ component.features_ingredients.descrip_features }}
+    {% for item_features in component.features_ingredients.features %}
+      {{ item_feature.image }}
+      {{ item_feature.image_alt }}
+      {{ item_feature.description }}
+    {% endfor %}
+{{ component.features_ingredients.image_features }}
+{{ component.features_ingredients.image_features_alt }}
+   {% for item_ingredients in component.features_ingredients.ingredients %}
+     {{ item_ingredients.image }}
+     {{ item_ingredients.image_alt }}
+     {{ item_ingredients.description }}
+   {% endfor %}
+{{ component.features_ingredients.text_button_features }}
+{{ component.features_ingredients.url_button_features }}
+{# FIN COMPONENTE FEATURES AND INGREDIENTS #}
+
 <main class="mainPpal">
 
 </main>
+
 
