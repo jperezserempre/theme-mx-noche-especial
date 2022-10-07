@@ -27,6 +27,26 @@
 {{ component.features_ingredients.url_button_features }}
 {# FIN COMPONENTE FEATURES AND INGREDIENTS #}
 
+
+
+{# INICIO COMPONENTE consumption occasions #}
+{{ component.consumption_occasions.title_occasions }}
+   {% for item_occasions in component.consumption_occasions.occasions %}
+     {{ item_occasions.image }}
+     {{ item_occasions.image_alt }}
+     {{ item_occasions.title }}
+     {{ item_occasions.description }}
+   {% endfor %}
+{{ component.consumption_occasions.image_occasions }}
+{{ component.consumption_occasions.image_occasions_alt }}
+{{ component.consumption_occasions.text_occasions }}
+{{ component.consumption_occasions.text_button_one_occasions }}
+{{ component.consumption_occasions.url_button_one_occasions }}
+{{ component.consumption_occasions.text_button_two_occasions }}
+{{ component.consumption_occasions.url_button_two_occasionss }}
+{# FIN COMPONENTE consumption occasions #}
+
+
 <main class="mainPpal">
 
 </main>
