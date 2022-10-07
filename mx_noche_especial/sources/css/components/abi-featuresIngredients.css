@@ -2,23 +2,30 @@
 .abi-mainContent {
     
     .abi-beerIngredients{
-        @apply w-[90%] h-full flex flex-col mx-auto;
-    
-        &__title {
-            @apply font-primary font-normal text-2xl text-white uppercase;
-        }
+        @apply w-[90%] flex flex-col mx-auto lg:flex-row lg:max-w-[1000px] lg:max-h-[536px];
+        
+        &Info {
+            @apply lg:w-[70%];
 
-        &__description {
-           @apply my-8 font-secondary font-normal text-white text-sm; 
+            &__title {
+                @apply font-primary font-normal text-2xl lg:text-3xl text-white uppercase;
+            }
+    
+            &__description {
+                @apply my-8 font-secondary font-normal text-white text-sm lg:text-lg; 
+            }
         }
 
         &__ingredientsWrapper {
-            @apply flex gap-4 place-content-center;
+            @apply flex gap-8 place-content-center max-h-[461px]; 
 
             div {
-                @apply flex flex-col gap-4;
+                @apply flex flex-col gap-4 justify-around;
             }
+        }
 
+        &__btnTada{
+            @apply lg:hidden flex items-center justify-center mx-auto w-[198px] h-[50px] font-secondary font-bold text-black text-base text-center bg-button-primary rounded-lg cursor-pointer;
         }
     
     }
