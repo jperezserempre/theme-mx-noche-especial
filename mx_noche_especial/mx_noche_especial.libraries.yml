@@ -6,7 +6,7 @@ global-styling:
 
   js:
     js/script.js: {}
-    dist/js/agegate.js: {}
+    js/agegate.js: {}
     dist/js/main.bundle.js: { attributes: { preload: true }, preprocess: false, minified: true }
   dependencies:
     - core/jquery
