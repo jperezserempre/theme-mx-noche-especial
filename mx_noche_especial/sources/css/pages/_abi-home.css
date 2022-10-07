@@ -1,0 +1,3 @@
+.abi-mainContent {
+    @apply bg-[url("../../sources/images/bg-home-mobile.png")] bg-no-repeat bg-cover lg:bg-[url("../../sources/images/bg-home-desktop.png")];
+}
