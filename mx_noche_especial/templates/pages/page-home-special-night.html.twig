@@ -47,8 +47,62 @@
 {# FIN COMPONENTE consumption occasions #}
 
 
-<main class="mainPpal">
+<main class="abi-mainContent w-full">
+    {# Inicio Banner Video Principal #}
+    <section class="w-full h-12 mb-4">
+    </section>
+
+    {# Inicio sección Ingredientes de la cerveza #}
+    <section class="abi-beerIngredients">
+      <div>
+        <h2 class="abi-beerIngredients__title">H2 ingredientes y características de la cerveza</h2>
+        <p class="abi-beerIngredients__description">
+            Modelo Noche Especial es una cerveza tipo Red Lager que llega para sorprender con su color ligeramente rojizo, aroma leñoso y levemente afrutado, que ofrece un sabor sutil y refrescante al paladar.
+        </p>
+      </div>
+      
+      <article class="abi-beerIngredients__ingredientsWrapper">
+            <img src="/{{ directory }}/sources/images/botella-modelo-navidad.png" alt="" title="">
+            <div>
+                <img src="/{{ directory }}/sources/images/ingrediente-agua.png" alt="" title="">            
+                <img src="/{{ directory }}/sources/images/ingrediente-levadura.png" alt="" title="">            
+                <img src="/{{ directory }}/sources/images/ingrediente-malta.png" alt="" title="">            
+                <img src="/{{ directory }}/sources/images/ingrediente-lupulo.png" alt="" title="">            
+            </div>
+      </article>
+
+      <article class="my-8 flex flex-col gap-y-2">
+            <div class="py-5 flex gap-4">
+                <img class="w-[50px] h-[50px] object-contain"  src="/{{ directory }}/sources/images/icon-gusto.png" alt="" title="">
+                <p class="font-secondary text-white font-normal text-base self-center">Sabor suave acaramelado y tostado con notas amargas.</p>
+            </div>
+            <div class="py-5 flex gap-4">
+                <img class="w-[50px] h-[50px] object-contain"  src="/{{ directory }}/sources/images/icon-vista.png" alt="" title="">
+                <p class="font-secondary text-white font-normal text-base self-center">Color ligeramente rojizo.</p>
+            </div>
+            <div class="py-5 flex gap-4">
+                <img class="w-[50px] h-[50px] object-contain"  src="/{{ directory }}/sources/images/icon-alcohol.png" alt="" title="">
+                <p class="font-secondary text-white font-normal text-base self-center">5.3% de alcohol</p>
+            </div>
+            <div class="py-5 flex gap-4">
+                <img class="w-[50px] h-[50px] object-contain"  src="/{{ directory }}/sources/images/icon-olor.png" alt="" title="">
+                <p class="font-secondary text-white font-normal text-base self-center">Aroma afrutado y ligeramente a granos de cebada.</p>
+            </div>
+            <div class="py-5 flex gap-4">
+                <img class="w-[50px] h-[50px] object-contain"  src="/{{ directory }}/sources/images/icon-maridaje.png" alt="" title="">
+                <p class="font-secondary text-white font-normal text-base self-center">Maridaje con pavo, pastas y ensaladas.</p>
+            </div>
+      </article>
+
+      <a class="flex items-center justify-center mx-auto w-[198px] h-[50px] font-secondary font-bold text-black text-base text-center bg-button-primary rounded-lg cursor-pointer lg:hidden" href="">COMPRA EN TADA</a>
+    
+    </section>
+
+
+    {# Inicio sección ocasiones de consumo #}
+    <section class="h-12 w-12"></section>
 
 </main>
+
 
 

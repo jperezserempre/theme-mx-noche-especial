@@ -1,0 +1,26 @@
+
+.abi-mainContent {
+    
+    .abi-beerIngredients{
+        @apply w-[90%] h-full flex flex-col mx-auto;
+    
+        &__title {
+            @apply font-primary font-normal text-2xl text-white uppercase;
+        }
+
+        &__description {
+           @apply my-8 font-secondary font-normal text-white text-sm; 
+        }
+
+        &__ingredientsWrapper {
+            @apply flex gap-4 place-content-center;
+
+            div {
+                @apply flex flex-col gap-4;
+            }
+
+        }
+    
+    }
+
+}
