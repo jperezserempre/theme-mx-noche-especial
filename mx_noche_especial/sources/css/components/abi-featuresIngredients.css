@@ -2,7 +2,7 @@
 .abi-mainContent {
     
     .abi-beerIngredients{
-        @apply w-[90%] flex flex-col mx-auto lg:flex-row lg:max-w-[1000px] lg:max-h-[536px];
+        @apply w-[90%] flex flex-col mx-auto mb-16 lg:flex-row lg:max-w-[1000px] lg:max-h-[536px];
         
         &Info {
             @apply lg:w-[70%];
