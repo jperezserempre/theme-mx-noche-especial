@@ -1,3 +1,10 @@
 .abi-mainContent {
     @apply w-full bg-[url("../../sources/images/bg-home-mobile.png")] bg-no-repeat bg-cover lg:bg-[url("../../sources/images/bg-home-desktop.jpg")];
 }
+
+.abi-videoBanner {
+
+    &__info {
+        @apply w-[90%] h-[475px] mx-auto bg-[url("../../sources/images/bg-section1-mobile.png")] bg-no-repeat bg-cover lg:bg-[url("../../sources/images/bg-section1-desktop.png")]; 
+    }
+}
