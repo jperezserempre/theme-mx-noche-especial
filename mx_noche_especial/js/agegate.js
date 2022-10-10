@@ -218,10 +218,10 @@
                 'event': 'GAEvent',
                 'event_category': 'Age Gate',
                 'event_action': 'Interaction',
-                'event_label': 'Yes',
+                'event_label': 'Send',
                 'interaction':'False',
-                'component_name': 'full_age_gate',
-                'element_text': 'Entrar',
+                'component_name': 'Entrar',
+                'element_text': 'Entrar_Noche_Especial',
               });
 
               $btnAgeGate.show();
@@ -233,8 +233,8 @@
                 'event_action': 'Interaction',
                 'event_label': 'No',
                 'interaction':'False',
-                'component_name': 'full_age_gate',
-                'element_text': 'Entrar'
+                'component_name': 'Entrar',
+                'element_text': 'Entrar_Noche_Especial'
               });
 
               window.location.replace(ABAgeGate.redirect);

@@ -28,11 +28,14 @@
   /* Background button*/
   --bg-primary: linear-gradient(180deg, #FFBC56 0%, #F4A01F 100%);
 
+  /*Bg gradient header*/
+  --bg-secondary: linear-gradient(180deg, #B20000 0%, #310200 99.99%, #310200 100%);
+
   /*Borders custom*/
 
   --border-linear-1: linear-gradient(90deg, #EEBB6F 10.67%, rgba(238, 187, 111, 0) 96.53%);
   
-
+  
 
 
 }

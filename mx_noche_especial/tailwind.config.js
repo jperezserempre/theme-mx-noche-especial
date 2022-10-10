@@ -8,12 +8,16 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        'button-primary': 'var(--bg-primary)'
+        'button-primary': 'var(--bg-primary)',
+        'header': 'var(--bg-secondary)'
       },
       colors: {
         primary: {
           DEFAULT: 'var(--color-primary-500)'
         },
+        header: {
+          DEFAULT: 'var(--border-linear-2)'
+        }
       },
       fontFamily: {
         primary: ['var(--font-family-primary)', ...defaultTheme.fontFamily.sans],
