@@ -1,4 +1,10 @@
 
 .abi-ocasiones {
-   @apply mx-auto lg:max-w-[1000px];
+   @apply mx-auto lg:max-w-[1091px];
+
+   .abi-ocasiones__card {
+      &:nth-child(2n-1){
+         /* @apply mr-[12%]; */
+      } 
+   }
 }
