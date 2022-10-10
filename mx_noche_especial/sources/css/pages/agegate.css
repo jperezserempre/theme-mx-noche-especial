@@ -1,0 +1,67 @@
+
+#agv2{
+    .agv2__container{
+        @apply w-full bg-[url("../../sources/images/agegate-mobile.jpg")] bg-no-repeat bg-cover lg:bg-[url("../../sources/images/agegate-desktop.jpg")];
+
+    } 
+    .agv2__brand {
+        @apply w-[188px] mb-4 ;
+    }
+
+    .abi-ageGate--title {
+        @apply font-primary font-normal text-lg text-white lg:text-2xl; 
+    }
+
+    .abi-ageGate--ageDisclaimer {
+        @apply mt-3 font-secondary font-normal text-base text-white lg:text-lg;
+    }
+
+    .form-age__content {
+        @apply flex justify-around lg:gap-8;
+
+        &--item-label {
+            @apply font-primary text-base text-white lg:text-2xl;
+        }
+
+        .age-date {
+            @apply flex
+        }
+
+        &--item-date {
+            @apply border-2 border-white rounded-md;
+        }
+    }
+
+    .agv2__input{
+        @apply w-[30px] h-[40px] lg:w-[45px] lg:h-[60px] rounded-md font-primary font-normal text-base lg:text-2xl bg-[#A95959] text-white;    
+        &::placeholder{
+            @apply text-white
+        }
+    }
+
+    .agegate-legal{
+        .agv2__checkbox {
+            @apply place-content-center place-items-center;
+        }
+        .agv2__label {
+            @apply font-secondary text-base text-white;
+        }
+
+        .checkbox__control {
+            @apply bg-transparent border border-white w-[28px] h-[28px];
+            svg path{
+                fill: white !important;
+            }
+        }
+    }
+
+    .agegate-legal__row {
+        p {
+            @apply mt-6 font-secondary text-base font-normal text-white text-center;
+        }
+    }
+
+    .agegate__btn.main {
+        @apply font-secondary font-bold text-base bg-button-primary leading-7 w-[220px] h-[50px] rounded-md;
+    }
+}

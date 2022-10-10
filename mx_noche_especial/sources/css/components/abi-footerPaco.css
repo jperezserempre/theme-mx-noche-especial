@@ -1,0 +1,86 @@
+
+#footer__paco {
+    .paco__main {
+        @apply !w-full !bg-[url("../../sources/images/bg-footerPaco-mobile.jpg")] !bg-no-repeat !bg-cover lg:!bg-[url("../../sources/images/bg-footerPaco-desktop.jpg")];
+    }
+
+    .footer__paco--disclaimer-up {
+        @apply !font-secondary !text-base !font-normal;
+    }
+
+    .paco__main--subscription-brand-logo {
+        img {
+            @apply !w-[152px];
+        } 
+    }
+
+    .paco__main--description {
+        @apply !font-secondary !text-base !font-normal;
+    }
+
+    .paco__subscribe-form-container {
+        @apply !font-secondary;
+
+        .js-form-submit {
+            @apply !bg-primary !font-bold;
+        }
+
+        .js-form-type-checkbox {
+            @apply !flex !items-center !justify-center !gap-4 !my-4;
+
+            label {
+                @apply !text-xs !py-0 !pl-2;
+            }
+        }
+
+        .js-form-type-checkbox input[type=checkbox]{
+            @apply !w-[16px] !h-[16px];
+        }
+    }
+
+    .paco__main--items {
+        @apply !hidden;
+
+    } 
+
+    .paco__main--title-social {
+        @apply !font-primary !text-sm !text-white !font-normal;
+    }
+
+    .paco-bottom-menu-whitte {
+        @apply !font-secondary !text-xs !font-normal;
+
+        ul {
+            @apply !gap-4;
+        
+            a {
+                @apply !text-white;
+            }
+        }
+
+        .menu {
+            @apply !border-white;   
+        }
+        
+    }
+
+    .menu__disclaimer--mobile-view {
+        @apply !flex !flex-col !items-center !justify-center lg:!block;
+
+        .first-block {
+            @apply !font-secondary !text-sm !font-bold;
+        }
+
+        .second-block {
+            @apply !font-secondary !justify-center !text-sm font-normal;
+            .menu__disclaimer--image {
+                @apply !hidden;
+            }
+        }
+    }
+
+    .paco__footer--desktop {
+        @apply lg:!hidden;
+    }
+
+}
