@@ -97,7 +97,7 @@
       </div>
     </article>
     <a class="abi-beerIngredients__btnTada" href="{{ component.features_ingredients.url_button_features }}">{{ component.features_ingredients.text_button_features }}</a>
-  
+
   </section>
 
   {# Inicio sección ocasiones de consumo #}
@@ -132,7 +132,7 @@
       </div>
     </article>
   </section>
-  
+
 
 
   {# INICIO COMPONENTE MAPA #}
@@ -148,13 +148,13 @@
                 <path  d="M21.0515 19.1376L28.7311 26.8174C29.001 27.0875 29.1526 27.4538 29.1524 27.8357C29.1523 28.2176 29.0005 28.5837 28.7304 28.8537C28.4602 29.1236 28.094 29.2752 27.7121 29.2751C27.3302 29.2749 26.964 29.1231 26.6941 28.853L19.0145 21.1732C16.7188 22.9513 13.8319 23.7881 10.9411 23.5133C8.05032 23.2385 5.37282 21.8727 3.45327 19.6937C1.53373 17.5148 0.516331 14.6865 0.60806 11.784C0.69979 8.88159 1.89375 6.12311 3.94706 4.06976C6.00036 2.0164 8.75877 0.822412 11.6611 0.73068C14.5635 0.638949 17.3918 1.65637 19.5707 3.57596C21.7495 5.49556 23.1153 8.17313 23.3901 11.064C23.6649 13.9548 22.8282 16.8418 21.05 19.1376H21.0515ZM12.0229 20.7092C14.2944 20.7092 16.4728 19.8069 18.079 18.2006C19.6852 16.5944 20.5875 14.4159 20.5875 12.1444C20.5875 9.87286 19.6852 7.69436 18.079 6.08814C16.4728 4.48192 14.2944 3.57956 12.0229 3.57956C9.75144 3.57956 7.57299 4.48192 5.96681 6.08814C4.36064 7.69436 3.45829 9.87286 3.45829 12.1444C3.45829 14.4159 4.36064 16.5944 5.96681 18.2006C7.57299 19.8069 9.75144 20.7092 12.0229 20.7092Z" fill="#5E5E5E;"/>
               </svg> #}
             </div>
-            <div class="page-find-it__section-three__filter abi-great-colombia__home--map--search--filter">
+            {# <div class="page-find-it__section-three__filter abi-great-colombia__home--map--search--filter">
               <ul class="filters">
                 {% for item_filter in filters %}
                   <li data-filter="{{ item_filter['title'] }}" data-color="{{ item_filter['color_card'] }}" data-colortext="{{ item_filter['color_texts_icons'] }}"> <p>{{ item_filter['title'] }}</p>  </li>
                 {% endfor %}
               </ul>
-            </div>
+            </div>#}
           </div>
         </div>
         {{ drupal_block('ab_pe_pacifico_mapas_embed') }}
