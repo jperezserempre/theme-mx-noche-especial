@@ -12,7 +12,7 @@ const proxy = 'https://mx-modelo-noche-especial.dd:8443/' || null;
 
 mix
   // Scripts
-  .js('sources/js/index.js', 'js/main.bundle.js')
+  .ts('sources/ts/index.ts', 'js/main.bundle.js')
   // Run ESLint on every file
   .eslint()
   // Styles
