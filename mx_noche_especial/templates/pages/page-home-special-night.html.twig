@@ -21,8 +21,51 @@
 
 
 <main class="abi-mainContent">
+  
   {# Inicio Banner Video Principal #}
+  <section class="abi-videoBanner relative mb-32">
+    <div class="w-[189px] lg:w-[450px] py-[125px] lg:pt-[182px] lg:pb-[100px] ml-auto mr-[19%] md:mx-auto">
+      <h1 class="pl-6 font-primary font-normal text-[6px] lg:text-xs text-white">H1 Cerveza modelo Noche especial</h1>
+      <picture>
+        <source srcset="/{{ directory }}/sources/images/NocheEspecialBrand-desktop.png" media="(min-width: 1024px)">
+        <img class="" src="/{{directory}}/sources/images/NocheEspecialBrand.png" alt="Logo de Cerveza Modelo" title="Logo de Cerveza Modelo" width="100%" height="100%">
+      </picture>
+      <h2 class="pl-6 font-third font-normal text-2xl lg:text-6xl text-white">H2 Placer conocernos</h2>
+    </div>
+    {# Flotantes con su contenedor y posicionados absolutos #}
+    <div class="absolute top-8 -left-10">
+      <picture>
+        <source srcset="/{{ directory }}/sources/images/botella-1-section1-desktop.png" media="(min-width: 1024px)">
+        <img class="" src="/{{ directory }}/sources/images/botella-1-section1-mobile.png" alt="" title="" >
+      </picture>
+    </div>
 
+    <div class="absolute z-10 right-6 bottom-80">
+      <picture>
+        <source srcset="/{{ directory }}/sources/images/botella-2-section-1-desktop.png" media="(min-width: 1024px)">
+        <img class="" src="/{{ directory }}/sources/images/botella-2-section-1.png" alt="" title="">
+      </picture>
+    </div>
+
+    <div class="absolute -top-8 right-0">
+      <picture>
+        <source srcset="/{{ directory }}/sources/images/botella-3-section-1-desktop.png" media="(min-width: 1024px)">
+        <img class="" src="/{{ directory }}/sources/images/botella-3-section-1.png" alt="" title="">
+      </picture>
+      
+    </div>
+
+    <section class="abi-videoBanner__info px-5 py-8 xl:pt-[58px] xl:px-[74px] relative bottom-0 left-0 right-0 xl:flex xl:flex-wrap">
+      <div class="pb-7 xl:w-[28%] xl:pt-[62px] xl:pr-6">
+        <h2 class="font-primary font-normal text-base pr-24 lg:pr-0 lg:mb-2.5 lg:text-2xl lg:leading-6">h2 Modelo Noche Especial. Placer conocernos.</h2>
+        <p class="font-secondary font-normal text-sm pr-16 xl:pr-0 lg:text-lg lg:leading-5">La cerveza de temporada que llega para acompañar las celebraciones. Su color viene del fuego que transforma las maltas para crear nuestra cerveza tipo red lager. </p>
+      </div>
+      <div class="w-screen xl:w-[72%] relative -translate-x-1/2 left-1/2 xl:left-0 xl:transform-none">
+        <img class="w-full aspect-[23/12] max-w-[713px] md:mx-auto" src="https://loremflickr.com/375/195" />
+        <img class="abi-videoBanner__preview absolute -translate-x-1/2 left-1/2 top-[30%] md:top-[40%]" src="/{{directory}}/sources/images/button-play.png" data-url="{{ component.banner.url_v_banner }}" />
+      </div>
+    </section>
+  </section>
 
   {# Inicio sección Ingredientes de la cerveza #}
   <section class="abi-beerIngredients">
