@@ -1,5 +1,5 @@
 .abi-mainContent {
-    @apply w-full bg-[url("../../sources/images/bg-home-mobile.png")] bg-no-repeat bg-cover lg:bg-[url("../../sources/images/bg-home-desktop.jpg")];
+    @apply w-full bg-[url("../../sources/images/bg-home-mobile.png")] bg-no-repeat bg-cover lg:bg-[url("../../sources/images/bg-home-desktop.png")];
 }
 
 .abi-videoBanner {
