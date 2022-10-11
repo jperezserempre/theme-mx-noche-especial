@@ -73,3 +73,23 @@
         url('../../sources/fonts/MuseoSans-700.woff2') format('woff2'); 
   font-display: swap;
 }
+
+@font-face {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 400;
+  src:  url('../../sources/fonts/Poppins-Regular.eot') format('eot'),
+        url('../../sources/fonts/Poppins-Regular.woff') format('woff'),
+        url('../../sources/fonts/Poppins-Regular.woff2') format('woff2'); 
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 700;
+  src:  url('../../sources/fonts/Poppins-Bold.eot') format('eot'),
+        url('../../sources/fonts/Poppins-Bold.woff') format('woff'),
+        url('../../sources/fonts/Poppins-Bold.woff2') format('woff2'); 
+  font-display: swap;
+}
