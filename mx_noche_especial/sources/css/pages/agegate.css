@@ -28,12 +28,12 @@
         }
 
         &--item-date {
-            @apply border-2 border-white rounded-md;
+            @apply border-2 border-white rounded-md p-2 gap-1 lg:p-4 lg:gap-2 ;
         }
     }
 
     .agv2__input{
-        @apply w-[30px] h-[40px] lg:w-[45px] lg:h-[60px] rounded-md font-primary font-normal text-base lg:text-2xl bg-[#A95959] text-white;    
+        @apply w-[30px] h-[40px] lg:w-[45px] lg:h-[60px] rounded-md m-0 font-primary font-normal text-base lg:text-2xl bg-[#A95959] text-white;    
         &::placeholder{
             @apply text-white
         }
