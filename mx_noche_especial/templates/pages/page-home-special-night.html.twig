@@ -1,24 +1,17 @@
-{# INICIO COMPONENTE BANNER #}
-{# {{ component.banner.title_g_banner }}
-{{ component.banner.title_v_banner }}
-{{ component.banner.descrip_v_banner }}
-{{ component.banner.preview_v_banner }}
-{{ component.banner.preview_v_banner_alt }}
-{{ component.banner.url_v_banner }} #}
-{# FIN COMPONENTE BANNER #}
-
-
-<main class="abi-mainContent">
-  
+<main class="abi-mainContent abi-home">
   {# Inicio Banner Video Principal #}
   <section class="abi-videoBanner relative mb-32">
     <div class="w-[189px] lg:w-[450px] py-[125px] lg:pt-[182px] lg:pb-[100px] ml-auto mr-[19%] md:mx-auto">
-      <h1 class="pl-6 font-primary font-normal text-[6px] lg:text-xs text-white">H1 Cerveza modelo Noche especial</h1>
+      <h1 class="pl-6 font-primary font-normal text-[6px] lg:text-xs text-white">
+        H1 Cerveza modelo Noche especial
+      </h1>
       <picture>
         <source srcset="/{{ directory }}/sources/images/NocheEspecialBrand-desktop.png" media="(min-width: 1024px)">
         <img class="" src="/{{directory}}/sources/images/NocheEspecialBrand.png" alt="Logo de Cerveza Modelo" title="Logo de Cerveza Modelo" width="100%" height="100%">
       </picture>
-      <h2 class="pl-6 font-third font-normal text-2xl lg:text-6xl text-white">H2 Placer conocernos</h2>
+      <h2 class="pl-6 font-third font-normal text-2xl lg:text-6xl text-white">
+        {{ component.banner.title_g_banner }}
+      </h2>
     </div>
     {# Flotantes con su contenedor y posicionados absolutos #}
     <div class="absolute top-8 -left-10">
@@ -45,12 +38,23 @@
 
     <section class="abi-videoBanner__info px-5 py-8 xl:pt-[58px] xl:px-[74px] relative bottom-0 left-0 right-0 xl:flex xl:flex-wrap">
       <div class="pb-7 xl:w-[28%] xl:pt-[62px] xl:pr-6">
-        <h2 class="font-primary font-normal text-base pr-24 lg:pr-0 lg:mb-2.5 lg:text-2xl lg:leading-6">h2 Modelo Noche Especial. Placer conocernos.</h2>
-        <p class="font-secondary font-normal text-sm pr-16 xl:pr-0 lg:text-lg lg:leading-5">La cerveza de temporada que llega para acompañar las celebraciones. Su color viene del fuego que transforma las maltas para crear nuestra cerveza tipo red lager. </p>
+        <h2 class="font-primary font-normal text-base pr-24 lg:pr-0 lg:mb-2.5 lg:text-2xl lg:leading-6">
+          {{ component.banner.title_v_banner }}
+        </h2>
+        <p class="font-secondary font-normal text-sm pr-16 xl:pr-0 lg:text-lg lg:leading-5">
+          {{ component.banner.descrip_v_banner }}
+        </p>
       </div>
       <div class="w-screen xl:w-[72%] relative -translate-x-1/2 left-1/2 xl:left-0 xl:transform-none">
-        <img class="w-full aspect-[23/12] max-w-[713px] md:mx-auto" src="https://loremflickr.com/375/195" />
-        <img class="abi-videoBanner__preview absolute -translate-x-1/2 left-1/2 top-[30%] md:top-[40%]" src="/{{directory}}/sources/images/button-play.png" data-url="{{ component.banner.url_v_banner }}" />
+        <img class="w-full aspect-[23/12] max-w-[713px] md:mx-auto" 
+        src="{{ component.banner.preview_v_banner }}"
+        alt="{{ component.banner.preview_v_banner_alt }}"
+        title="{{ component.banner.preview_v_banner_alt }}"
+        />
+        <img 
+        class="abi-videoBanner__preview absolute -translate-x-1/2 left-1/2 top-[30%] md:top-[40%]" src="/{{directory}}/sources/images/button-play.png" 
+        data-url="{{ component.banner.url_v_banner }}" 
+        data-video-id="-ilTV_wDRNA"/>
       </div>
     </section>
   </section>
@@ -164,4 +168,30 @@
   {# FIN COMPONENTE MAPA #}
 </main>
 
-
+{# Modal Video #}
+{# activates with abi-modal--active #}
+<div class="abi-modal modal flex justify-center items-center z-20 h-full w-full inset-0 fixed backdrop-blur-md bg-[rgba(0,0,0,0.7)] lg:pt-20" id="modalYoutube"> 
+    {# modal body #}
+		<div
+			class="abi-modal__body w-screen max-w-[1062px] relative">
+			<button type="button" class="close-modal-event close abi-modal__btn-close absolute -top-[3.25rem] lg:-top-[3.125rem] right-3 xl:right-0 text-white font-semibold" data-dismiss="modal">
+        <svg class="pointer-events-none" width="39" height="39" viewbox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M19.5 2.4375C9.99375 2.4375 2.4375 9.99375 2.4375 19.5C2.4375 29.0063 9.99375 36.5625 19.5 36.5625C29.0063 36.5625 36.5625 29.0063 36.5625 19.5C36.5625 9.99375 29.0063 2.4375 19.5 2.4375ZM19.5 34.125C11.4563 34.125 4.875 27.5438 4.875 19.5C4.875 11.4563 11.4563 4.875 19.5 4.875C27.5438 4.875 34.125 11.4563 34.125 19.5C34.125 27.5438 27.5438 34.125 19.5 34.125Z" fill="url(#paint0_linear_155_1997)"/>
+          <path d="M26.0812 28.0312L19.5 21.45L12.9188 28.0312L10.9688 26.0812L17.55 19.5L10.9688 12.9188L12.9188 10.9688L19.5 17.55L26.0812 10.9688L28.0312 12.9188L21.45 19.5L28.0312 26.0812L26.0812 28.0312Z" fill="url(#paint1_linear_155_1997)"/>
+          <defs>
+            <linearGradient id="paint0_linear_155_1997" x1="19.5" y1="2.4375" x2="19.5" y2="36.5625" gradientunits="userSpaceOnUse">
+              <stop stop-color="#FFBC56"/>
+              <stop offset="1" stop-color="#F4A01F"/>
+            </linearGradient>
+            <linearGradient id="paint1_linear_155_1997" x1="19.5" y1="10.9687" x2="19.5" y2="28.0312" gradientunits="userSpaceOnUse">
+              <stop stop-color="#FFBC56"/>
+              <stop offset="1" stop-color="#F4A01F"/>
+            </linearGradient>
+          </defs>
+        </svg>
+			</button>
+      <div class="w-screen aspect-[23/12] max-w-[1062px] abi-modal-video-banner__preview">
+      </div>
+		</div>
+</div>
+{# End Modal Video#}
