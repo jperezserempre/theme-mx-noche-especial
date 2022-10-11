@@ -118,8 +118,8 @@
             <img src="{{ component.consumption_occasions.image_occasions }}" alt="{{ component.consumption_occasions.image_occasions_alt }}" title="{{ component.consumption_occasions.image_occasions_alt }}">
             <p class="text-white uppercase text-sm font-medium absolute top-[65%] lg:top-[70%]">Botella 355ml</p>
             <p class="font-secondary text-base text-white font-bold absolute top-[70%] lg:top-[75%]">{{ component.consumption_occasions.text_occasions }}</p>
-            <a class="bg-button-primary font-secondary text-sm font-bold w-[148px] h-[45px] rounded-md flex place-content-center place-items-center leading-4" href="{{ component.consumption_occasions.url_button_one_occasions }}">{{ component.consumption_occasions.text_button_one_occasions }}</a>
-            <a class="bg-button-primary font-secondary text-sm font-bold w-[148px] h-[45px] rounded-md flex place-content-center place-items-center leading-4" href="{{ component.consumption_occasions.url_button_two_occasionss }}">{{ component.consumption_occasions.text_button_two_occasions }}</a>
+            <a class="btn-ocasions-tada bg-button-primary font-secondary text-sm font-bold w-[148px] h-[45px] rounded-md flex place-content-center place-items-center leading-4" href="{{ component.consumption_occasions.url_button_one_occasions }}">{{ component.consumption_occasions.text_button_one_occasions }}</a>
+            <a class="btn-ocasions-wallmart bg-button-primary font-secondary text-sm font-bold w-[148px] h-[45px] rounded-md flex place-content-center place-items-center leading-4" href="{{ component.consumption_occasions.url_button_two_occasionss }}">{{ component.consumption_occasions.text_button_two_occasions }}</a>
           </div>
         </div>
       </div>
@@ -141,6 +141,7 @@
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M17.8823 10.9998C17.8823 15.077 14.6161 18.3332 10.647 18.3332C6.67799 18.3332 3.41174 15.077 3.41174 10.9998C3.41174 6.92272 6.67799 3.6665 10.647 3.6665C14.6161 3.6665 17.8823 6.92272 17.8823 10.9998ZM15.9263 19.8543C14.3849 20.7931 12.5785 21.3332 10.647 21.3332C4.99424 21.3332 0.411743 16.7068 0.411743 10.9998C0.411743 5.29289 4.99424 0.666504 10.647 0.666504C16.2998 0.666504 20.8823 5.29289 20.8823 10.9998C20.8823 13.6671 19.8814 16.0983 18.238 17.9315L24.6743 24.5835L22.5882 26.7395L15.9263 19.8543Z" fill="#EEBB6F"/>
               </svg>
             </div>
+            {#  NO DESCOMENTAR NI BORRAR PENDIENTE DE CONFIRMACION DEL FILTROS POR TIPO
             <div class="page-find-it__section-three__filter abi-great-colombia__home--map--search--filter">
               <ul class="filters">
                 {% for item_filter in filters %}
@@ -148,6 +149,7 @@
                 {% endfor %}
               </ul>
             </div>
+            #}
           </div>
         </div>
         {{ drupal_block('ab_pe_pacifico_mapas_embed') }}
