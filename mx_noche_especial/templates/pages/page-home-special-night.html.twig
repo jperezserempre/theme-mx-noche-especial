@@ -119,12 +119,14 @@
           </div>
         </div>
         <div class="w-1/2 lg:absolute lg:w-[50%] lg:-translate-x-1/2 lg:left-1/2 -top-[30%]">
-          <div class="relative flex flex-col justify-center items-center gap-4 -mt-[90%] md:mt-0">
-            <img src="{{ component.consumption_occasions.image_occasions }}" alt="{{ component.consumption_occasions.image_occasions_alt }}" title="{{ component.consumption_occasions.image_occasions_alt }}">
-            <p class="text-white uppercase text-sm font-medium absolute top-[65%] lg:top-[70%]">Botella 355ml</p>
-            <p class="font-secondary text-base text-white font-bold absolute top-[70%] lg:top-[75%]">{{ component.consumption_occasions.text_occasions }}</p>
-            <a class="btn-ocasions-tada bg-button-primary font-secondary text-sm font-bold w-[148px] h-[45px] rounded-md flex place-content-center place-items-center leading-4" href="{{ component.consumption_occasions.url_button_one_occasions }}">{{ component.consumption_occasions.text_button_one_occasions }}</a>
-            <a class="btn-ocasions-wallmart bg-button-primary font-secondary text-sm font-bold w-[148px] h-[45px] rounded-md flex place-content-center place-items-center leading-4" href="{{ component.consumption_occasions.url_button_two_occasionss }}">{{ component.consumption_occasions.text_button_two_occasions }}</a>
+          <div class="relative flex flex-col justify-center items-center -mt-[90%] md:mt-0">
+            <div class="relative flex place-content-center place-items-center">
+              <img class="" src="{{ component.consumption_occasions.image_occasions }}" alt="{{ component.consumption_occasions.image_occasions_alt }}" title="{{ component.consumption_occasions.image_occasions_alt }}">
+              <p class="font-fifth text-white tracking-widest uppercase text-sm font-medium absolute top-[85%]">Botella 355ml</p>
+              <p class="font-secondary text-base text-white font-bold absolute top-[92%]">{{ component.consumption_occasions.text_occasions }}</p>
+            </div>
+            <a class="btn-ocasions-tada bg-button-primary font-secondary text-sm font-bold w-[148px] h-[45px] rounded-md flex justify-center items-center text-center mb-4 leading-4" href="{{ component.consumption_occasions.url_button_one_occasions }}">{{ component.consumption_occasions.text_button_one_occasions }}</a>
+            <a class="btn-ocasions-wallmart bg-button-primary font-secondary text-sm font-bold w-[148px] h-[45px] rounded-md flex justify-center items-center text-center leading-4" href="{{ component.consumption_occasions.url_button_two_occasionss }}">{{ component.consumption_occasions.text_button_two_occasions }}</a>
           </div>
         </div>
       </div>

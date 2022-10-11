@@ -93,3 +93,13 @@
         url('../../sources/fonts/Poppins-Bold.woff2') format('woff2'); 
   font-display: swap;
 }
+
+@font-face {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 500;
+  src:  url('../../sources/fonts/Inter-Regular.eot') format('eot'),
+        url('../../sources/fonts/Inter-Regular.woff') format('woff'),
+        url('../../sources/fonts/Inter-Regular.woff2') format('woff2'); 
+  font-display: swap;
+}
