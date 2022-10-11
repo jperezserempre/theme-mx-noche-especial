@@ -1,0 +1,1 @@
+export { pageExist } from './page-exist'

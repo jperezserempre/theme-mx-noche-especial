@@ -1,0 +1,11 @@
+/* styles for modals*/
+body.no-scroll{
+    @apply overflow-hidden;
+}
+.abi-modal{
+    @apply -translate-y-full opacity-0 delay-500 transition-opacity duration-700 ease-in-out;
+    /*states for active modal*/
+    &--active{
+        @apply translate-y-0 opacity-100;
+    }
+}

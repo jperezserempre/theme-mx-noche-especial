@@ -9,7 +9,8 @@ module.exports = {
     extend: {
       backgroundImage: {
         'button-primary': 'var(--bg-primary)',
-        'header': 'var(--bg-secondary)'
+        'header': 'var(--bg-secondary)',
+        'bg-map': 'var(--bg-linear-map)'
       },
       colors: {
         primary: {

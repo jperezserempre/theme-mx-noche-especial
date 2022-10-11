@@ -29,7 +29,15 @@
             @apply !flex !items-center !justify-center !gap-4 !my-4;
 
             label {
-                @apply !text-xs !py-0 !pl-2;
+                @apply !text-xs !py-0 !pl-4;
+
+               &:before {
+                    @apply !bg-[url("../../sources/images/checkbox-unchecked.png")] !w-[21px] !h-[20px];
+               }
+            }
+
+            input[type=checkbox]:checked+label:after {
+                @apply !bg-[url("../../sources/images/checkbox-checked.png")] !w-[21px] !h-[20px];
             }
         }
 
