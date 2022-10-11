@@ -28,9 +28,12 @@
 
   /* Background button*/
   --bg-primary: linear-gradient(180deg, #FFBC56 0%, #F4A01F 100%);
+  
 
   /*Bg gradient header*/
   --bg-secondary: linear-gradient(180deg, #B20000 0%, #310200 99.99%, #310200 100%);
+
+  --bg-linear-map: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 53.44%, rgba(0, 0, 0, 0) 100%);
 
   /*Borders custom*/
 
