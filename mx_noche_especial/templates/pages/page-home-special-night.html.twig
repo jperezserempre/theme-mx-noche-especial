@@ -7,18 +7,6 @@
 {{ component.banner.url_v_banner }} #}
 {# FIN COMPONENTE BANNER #}
 
-{# {% for item_features in component.features_ingredients.features %}
-      {{ item_feature.image }}
-      {{ item_feature.image_alt }}
-      {{ item_feature.description }}
-{% endfor %}  #}
-
- {# {% for item_features in component.features_ingredients.features %}
-      {{ item_features.image }}
-      {{ item_features.image_alt }}
-      {{ item_features.description }}
-{% endfor %} #}
-
 
 <main class="abi-mainContent">
   
@@ -75,30 +63,15 @@
 
       {# Only desktop #}
       <div class="hidden lg:grid lg:grid-rows-3 lg:grid-cols-2 lg:grid-flow-col lg:gap-8">
-        <div class="flex gap-4">
-          <img class="w-[50px] h-[50px] object-contain"  src="/{{ directory }}/sources/images/icon-gusto.png" alt="" title="">
-          <p class="font-secondary text-white font-normal text-base self-center">Sabor suave acaramelado y tostado con notas amargas.</p>
-        </div>
-        <div class="flex gap-4">
-          <img class="w-[50px] h-[50px] object-contain"  src="/{{ directory }}/sources/images/icon-vista.png" alt="" title="">
-          <p class="font-secondary text-white font-normal text-base self-center">Color ligeramente rojizo.</p>
-        </div>
-        <div class="flex gap-4">
-          <img class="w-[50px] h-[50px] object-contain"  src="/{{ directory }}/sources/images/icon-alcohol.png" alt="" title="">
-          <p class="font-secondary text-white font-normal text-base self-center">5.3% de alcohol</p>
-        </div>
-        <div class="flex gap-4">
-          <img class="w-[50px] h-[50px] object-contain"  src="/{{ directory }}/sources/images/icon-olor.png" alt="" title="">
-          <p class="font-secondary text-white font-normal text-base self-center">Aroma afrutado y ligeramente a granos de cebada.</p>
-        </div>
-        <div class="flex gap-4">
-          <img class="w-[50px] h-[50px] object-contain"  src="/{{ directory }}/sources/images/icon-maridaje.png" alt="" title="">
-          <p class="font-secondary text-white font-normal text-base self-center">Maridaje con pavo, pastas y ensaladas.</p>
-        </div>
+        {% for item_features in component.features_ingredients.features %}
+            <div class="flex gap-4">
+              <img class="w-[50px] h-[50px] object-contain"  src="{{ item_features.image }}" alt="{{ item_features.image_alt }}" title="{{ item_features.image_alt }}">
+              <p class="font-secondary text-white font-normal text-base self-center">{{ item_features.description }}</p>
+            </div>
+        {% endfor %}
       </div>
       {# Only desktop #}
       <a class="hidden mt-[30px] lg:flex lg:items-center lg:justify-center mx-auto w-[220px] h-[50px] font-secondary font-bold text-black text-base text-center bg-button-primary rounded-lg cursor-pointer" href="{{ component.features_ingredients.url_button_features }}">{{ component.features_ingredients.text_button_features }}</a>
-
     </div>
     {# Bottle and Ingredients #}
     <article class="abi-beerIngredients__ingredientsWrapper ">
@@ -111,29 +84,14 @@
     </article>
 
     <article class="my-8 flex flex-col gap-y-2 lg:hidden">
-      <div class="py-5 flex gap-4">
-        <img class="w-[50px] h-[50px] object-contain"  src="/{{ directory }}/sources/images/icon-gusto.png" alt="" title="">
-        <p class="font-secondary text-white font-normal text-base self-center">Sabor suave acaramelado y tostado con notas amargas.</p>
-      </div>
-      <div class="py-5 flex gap-4">
-        <img class="w-[50px] h-[50px] object-contain"  src="/{{ directory }}/sources/images/icon-vista.png" alt="" title="">
-        <p class="font-secondary text-white font-normal text-base self-center">Color ligeramente rojizo.</p>
-      </div>
-      <div class="py-5 flex gap-4">
-        <img class="w-[50px] h-[50px] object-contain"  src="/{{ directory }}/sources/images/icon-alcohol.png" alt="" title="">
-        <p class="font-secondary text-white font-normal text-base self-center">5.3% de alcohol</p>
-      </div>
-      <div class="py-5 flex gap-4">
-        <img class="w-[50px] h-[50px] object-contain"  src="/{{ directory }}/sources/images/icon-olor.png" alt="" title="">
-        <p class="font-secondary text-white font-normal text-base self-center">Aroma afrutado y ligeramente a granos de cebada.</p>
-      </div>
-      <div class="py-5 flex gap-4">
-        <img class="w-[50px] h-[50px] object-contain"  src="/{{ directory }}/sources/images/icon-maridaje.png" alt="" title="">
-        <p class="font-secondary text-white font-normal text-base self-center">Maridaje con pavo, pastas y ensaladas.</p>
-      </div>
+      {% for item_features in component.features_ingredients.features %}
+        <div class="py-5 flex gap-4">
+          <img class="w-[50px] h-[50px] object-contain"  src="{{ item_features.image }}" alt="{{ item_features.image_alt }}" title="{{ item_features.image_alt }}">
+          <p class="font-secondary text-white font-normal text-base self-center">{{ item_features.description }}</p>
+        </div>
+      {% endfor %}
     </article>
     <a class="abi-beerIngredients__btnTada" href="{{ component.features_ingredients.url_button_features }}">{{ component.features_ingredients.text_button_features }}</a>
-
   </section>
 
   {# Inicio sección ocasiones de consumo #}
