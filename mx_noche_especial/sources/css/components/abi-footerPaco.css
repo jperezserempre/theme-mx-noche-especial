@@ -5,7 +5,7 @@
     }
 
     .footer__paco--disclaimer-up {
-        @apply !font-secondary !text-base !font-normal;
+        @apply !font-fourth !text-base !font-normal;
     }
 
     .paco__main--subscription-brand-logo {

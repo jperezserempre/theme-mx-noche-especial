@@ -22,7 +22,8 @@ module.exports = {
       fontFamily: {
         primary: ['var(--font-family-primary)', ...defaultTheme.fontFamily.sans],
         secondary: ['var(--font-family-secondary)',...defaultTheme.fontFamily.sans,],
-        third: ['var(--font-family-third)',...defaultTheme.fontFamily.sans,]
+        third: ['var(--font-family-third)',...defaultTheme.fontFamily.sans,],
+        fourth: ['var(--font-family-fourth)',...defaultTheme.fontFamily.sans,]
       },
       fontSize: {
         xs: 'var(--text-xs)',
