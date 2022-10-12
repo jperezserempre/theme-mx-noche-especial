@@ -14,3 +14,8 @@ html {
 div[data-drupal-messages] {
   display: none; 
 }
+
+
+.c-mapModal {
+  width: 364px;
+}
