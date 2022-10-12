@@ -15,12 +15,3 @@ div[data-drupal-messages] {
   display: none; 
 }
 
-
-.c-mapModal {
- 
-
-  @apply w-[232px] h-[121px] lg:w-[364px] flex flex-col justify-center items-center !bg-white;
-
-
-
-}

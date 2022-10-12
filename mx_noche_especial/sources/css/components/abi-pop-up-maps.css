@@ -1,0 +1,26 @@
+.c-mapModal {
+
+    @apply w-[232px] h-[121px] lg:w-[364px] flex flex-col justify-center items-center gap-[12px] mx-0 lg:mx-2;
+    
+    .c-mapModal__description {
+        @apply font-secondary font-light self-start;  
+        .cmapModal__title-direction{
+            @apply font-bold;
+        }
+    
+    }
+    
+    .c-mapModal__title {
+        @apply font-primary text-xs self-start
+    }
+
+    .c-mapModal__place {
+        @apply self-end;
+
+    .c-mapModal__place__link {
+        @apply bg-button-primary font-secondary text-[9px] text-center font-normal w-[100px] h-[21px] p-2 rounded-md self-end; 
+        }
+    
+    }
+    
+}
