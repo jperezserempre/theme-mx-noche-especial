@@ -18,7 +18,7 @@ pageExist({
         })
         /* videoRender in modal */
         // Detect clicks on the video thumbnails
-        const thumbnailsVideos = document.querySelectorAll('.abi-videoBanner [data-url]');
+        const thumbnailsVideos = document.querySelectorAll('.abi-videoBanner [data-video-id]');
         const lengthOfVideos = thumbnailsVideos.length;
         const videoRenderContainer = document.querySelector('.abi-modal-video-banner__preview')
         if (lengthOfVideos) {
