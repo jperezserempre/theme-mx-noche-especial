@@ -203,6 +203,7 @@
 </div>
 {# End Modal Video#}
 {# sticky #}
+{% if component.sticky.label and component.sticky.link %}
 <article class="abi-sticky drop-shadow-[0_2.37456px_2.37456px_rgba(0,0,0,0.25)] z-10 fixed isolate w-[158px] h-[82px] lg:w-[266px] lg:h-[138px] top-1/2 right-2 lg:right-10 -translate-y-1/2 flex flex-wrap flex-col items-center justify-between py-1.5 px-7 lg:px-12 lg:py-2.5">
   {# Banner sticky #}
   <img
@@ -245,9 +246,10 @@
       loading="lazy"
     />
 	</picture>
-	<a class="inline-block font-secondary bg-button-primary rounded-xl px-2.5 py-1 lg:px-3 lg:py-2 text-[9px] lg:text-[15px] font-semibold" href="{{''}}">
-    {{'COMPRA EN TADA'}}
+  <a class="inline-block font-secondary bg-button-primary rounded-xl px-2.5 py-1 lg:px-3 lg:py-2 text-[9px] lg:text-[15px] font-semibold" href="{{ component.sticky.link }}">
+    {{ component.sticky.label }}
   </a>
 </article>
+{% endif %}
 
 {# End sticky #}
