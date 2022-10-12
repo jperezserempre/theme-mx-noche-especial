@@ -78,7 +78,7 @@
       <div class="hidden lg:grid lg:grid-rows-3 lg:grid-cols-2 lg:grid-flow-col lg:gap-8">
         {% for item_features in component.features_ingredients.features %}
             <div>
-              <div class="flex gap-4">
+              <div class="flex space-x-4">
                 <img class="w-[50px] h-[50px] object-contain"  src="{{ item_features.image }}" alt="{{ item_features.image_alt }}" title="{{ item_features.image_alt }}">
                 <p class="font-secondary text-white font-normal text-base self-center">{{ item_features.description }}</p>
               </div>
@@ -87,7 +87,7 @@
         {% endfor %}
       </div>
       {# Only desktop #}
-      <a class="hidden mt-[30px] lg:flex lg:items-center lg:justify-center mx-auto w-[220px] h-[50px] font-secondary font-bold text-black text-base text-center bg-button-primary rounded-lg cursor-pointer" href="{{ component.features_ingredients.url_button_features }}">{{ component.features_ingredients.text_button_features }}</a>
+      <a class="abi-beerIngredients__btnTada hidden mt-[30px] lg:flex lg:items-center lg:justify-center mx-auto w-[220px] h-[50px] font-secondary font-bold text-black text-base text-center bg-button-primary rounded-lg cursor-pointer" href="{{ component.features_ingredients.url_button_features }}">{{ component.features_ingredients.text_button_features }}</a>
     </div>
     {# Bottle and Ingredients #}
     <article class="abi-beerIngredients__ingredientsWrapper ">
@@ -101,7 +101,7 @@
 
     <article class="my-8 flex flex-col gap-y-2 lg:hidden">
       {% for item_features in component.features_ingredients.features %}
-        <div class="py-5 flex gap-4">
+        <div class="py-5 flex space-x-4">
           <img class="w-[50px] h-[50px] object-contain"  src="{{ item_features.image }}" alt="{{ item_features.image_alt }}" title="{{ item_features.image_alt }}">
           <p class="font-secondary text-white font-normal text-base self-center">{{ item_features.description }}</p>
         </div>
@@ -156,7 +156,7 @@
         <div class="">
           <h2 class="relative font-primary text-2xl text-white mx-auto text-center w-3/5 mb-5">{{ title_block_map }}</h2>
           <div class="page-find-it__section-three__box abi-great-colombia__home--map--searchp relative">
-            <div class="page-find-it__section-three__search abi-great-colombia__home--map--search--wrapper relative mb-4 w-[352px] lg:w-[860px] mx-auto">
+            <div class="page-find-it__section-three__search abi-great-colombia__home--map--search--wrapper relative mb-4 w-[94%] lg:w-[860px] mx-auto">
               <input id="input-search-map" class="abi-great-colombia__home--map--search-input bg-transparent font-secondary font-normal text-white text-xs w-full h-[52px] rounded-full pl-[63px] border border-[#EEBB6F] placeholder:text-white"  type="text" placeholder="{{ placeholder_filter_map }}" />
               <svg class="absolute top-[15px] left-6" id="btn-search-map" width="25" height="27" viewBox="0 0 25 27" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M17.8823 10.9998C17.8823 15.077 14.6161 18.3332 10.647 18.3332C6.67799 18.3332 3.41174 15.077 3.41174 10.9998C3.41174 6.92272 6.67799 3.6665 10.647 3.6665C14.6161 3.6665 17.8823 6.92272 17.8823 10.9998ZM15.9263 19.8543C14.3849 20.7931 12.5785 21.3332 10.647 21.3332C4.99424 21.3332 0.411743 16.7068 0.411743 10.9998C0.411743 5.29289 4.99424 0.666504 10.647 0.666504C16.2998 0.666504 20.8823 5.29289 20.8823 10.9998C20.8823 13.6671 19.8814 16.0983 18.238 17.9315L24.6743 24.5835L22.5882 26.7395L15.9263 19.8543Z" fill="#EEBB6F"/>

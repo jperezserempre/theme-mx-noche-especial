@@ -10,9 +10,3 @@ html {
     -moz-osx-font-smoothing: grayscale;
   }
 }
-div[data-drupal-messages] {
-  display: none; 
-}
-.cc_banner-wrapper{
-  display:none;
-}
