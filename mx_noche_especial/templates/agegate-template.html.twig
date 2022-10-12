@@ -11,7 +11,7 @@
           <p class="abi-ageGate--title">DEBES SER MAYOR DE EDAD PARA CONTINUAR</p>
           <p class="abi-ageGate--ageDisclaimer">Ingresa tu fecha de nacimiento</p>
         </header>
-      
+
         <div class="form-age">
           <div class="form-age__header">
             <p class="agv2__p">{{ description_year }}</p>
@@ -23,19 +23,19 @@
             <div class="year form-age__content--item">
               <p class="text-info form-age__content--item-label">AÑO</p>
               <div class="age-date form-age__content--item-date">
-                <input class="agv2__input form-age__content--item-input" data-qadp="age_gate_year_1" data-type="input-year" data-next="year-02" data-previous="month-02" data-element="year-01" type="tel" pattern="\d*" placeholder="A" maxlength="1">
+                <input id="focus" class="agv2__input form-age__content--item-input" data-qadp="age_gate_year_1" data-type="input-year" data-next="year-02" data-element="year-01" type="tel" pattern="\d*" placeholder="A" maxlength="1">
                 <input class="agv2__input form-age__content--item-input" data-qadp="age_gate_year_2" data-type="input-year" data-previous="year-01" data-next="year-03" data-element="year-02" type="tel" pattern="\d*" placeholder="A" maxlength="1">
                 <input class="agv2__input form-age__content--item-input" data-qadp="age_gate_year_3" data-type="input-year" data-previous="year-02" data-next="year-04" data-element="year-03" type="tel" pattern="\d*" placeholder="A" maxlength="1">
-                <input class="agv2__input form-age__content--item-input" data-qadp="age_gate_year_4" data-type="input-year" data-previous="year-03" data-element="year-04" type="tel" pattern="\d*" placeholder="A" maxlength="1">
+                <input class="agv2__input form-age__content--item-input" data-qadp="age_gate_year_4" data-type="input-year" data-previous="year-03" data-next="month-01" data-element="year-04" type="tel" pattern="\d*" placeholder="A" maxlength="1">
               </div>
             </div>
-          
+
             {# Month #}
             <div class="month form-age__content--item">
             <p class="text-info form-age__content--item-label">MES</p>
             <div class="age-date form-age__content--item-date">
-              <input class="agv2__input form-age__content--item-input" data-qadp="age_gate_month_1" data-type="input-month" data-next="month-02" data-previous="day-02" data-element="month-01" type="tel" pattern="\d*" placeholder="M" maxlength="1">
-              <input class="agv2__input form-age__content--item-input" data-qadp="age_gate_month_2" data-type="input-month" data-next="year-01" data-previous="month-01" data-element="month-02" type="tel" pattern="\d*" placeholder="M" maxlength="1">
+              <input class="agv2__input form-age__content--item-input" data-qadp="age_gate_month_1" data-type="input-month" data-next="month-02" data-previous="year-04" data-element="month-01" type="tel" pattern="\d*" placeholder="M" maxlength="1">
+              <input class="agv2__input form-age__content--item-input" data-qadp="age_gate_month_2" data-type="input-month" data-next="day-01" data-previous="month-01" data-element="month-02" type="tel" pattern="\d*" placeholder="M" maxlength="1">
             </div>
             </div>
 
@@ -43,8 +43,8 @@
             <div class="day form-age__content--item">
             <p class="text-info form-age__content--item-label">DÍA</p>
             <div class="age-date form-age__content--item-date">
-              <input id="focus" class="agv2__input form-age__content--item-input" data-qadp="age_gate_day_1" data-type="input-day" data-next="day-02" data-element="day-01" type="tel" pattern="\d*" placeholder="D" maxlength="1">
-              <input class="agv2__input form-age__content--item-input" data-qadp="age_gate_day_2" data-type="input-day" data-next="month-01" data-previous="day-01" data-element="day-02" type="tel" pattern="\d*" placeholder="D" maxlength="1">
+              <input class="agv2__input form-age__content--item-input" data-qadp="age_gate_day_1" data-type="input-day" data-next="day-02" data-previous="month-02" data-element="day-01" type="tel" pattern="\d*" placeholder="D" maxlength="1">
+              <input class="agv2__input form-age__content--item-input" data-qadp="age_gate_day_2" data-type="input-day" data-previous="day-01" data-element="day-02" type="tel" pattern="\d*" placeholder="D" maxlength="1">
             </div>
             </div>
           </div>
@@ -84,7 +84,7 @@
         </div>
       </div>
     </div>
-    
+
     <div id="footer__paco" class="footer__load footer"></div>
   </section>
   {# State 01 #}

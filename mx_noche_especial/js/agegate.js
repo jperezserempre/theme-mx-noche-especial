@@ -37,7 +37,7 @@
 
         $(document).ready(function(){
           if($("#agv2").length){
-            $(".footer__load").html($(".layout-container #footer__paco").html());
+            $(".footer__load").html($("nav #footer__paco").html());
           }
         });
 
