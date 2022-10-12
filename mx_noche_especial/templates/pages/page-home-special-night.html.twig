@@ -69,7 +69,7 @@
       <div class="hidden lg:grid lg:grid-rows-3 lg:grid-cols-2 lg:grid-flow-col lg:gap-8">
         {% for item_features in component.features_ingredients.features %}
             <div>
-              <div class="flex gap-4">
+              <div class="flex space-x-4">
                 <img class="w-[50px] h-[50px] object-contain"  src="{{ item_features.image }}" alt="{{ item_features.image_alt }}" title="{{ item_features.image_alt }}">
                 <p class="font-secondary text-white font-normal text-base self-center">{{ item_features.description }}</p>
               </div>
@@ -92,7 +92,7 @@
 
     <article class="my-8 flex flex-col gap-y-2 lg:hidden">
       {% for item_features in component.features_ingredients.features %}
-        <div class="py-5 flex gap-4">
+        <div class="py-5 flex space-x-4">
           <img class="w-[50px] h-[50px] object-contain"  src="{{ item_features.image }}" alt="{{ item_features.image_alt }}" title="{{ item_features.image_alt }}">
           <p class="font-secondary text-white font-normal text-base self-center">{{ item_features.description }}</p>
         </div>
