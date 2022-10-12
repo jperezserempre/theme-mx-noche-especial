@@ -1,6 +1,6 @@
 <main class="abi-mainContent abi-home">
   {# Inicio Banner Video Principal #}
-  <section class="abi-videoBanner relative isolate mb-32 top-20 overflow-hidden">
+  <section class="abi-videoBanner relative isolate mb-32 top-20">
     <div class="w-[189px] lg:w-[450px] py-[125px] lg:pt-[182px] lg:pb-[100px] ml-auto mr-[19%] md:mx-auto">
       <h1 class="pl-6 font-primary font-normal text-[6px] lg:text-xs text-white">
         {% if component.banner.firts_title_banner %}
@@ -69,7 +69,7 @@
   </section>
 
   {# Inicio sección Ingredientes de la cerveza #}
-  <section class="abi-beerIngredients">
+  <section class="abi-beerIngredients lg:pt-28">
     <div class="abi-beerIngredientsInfo">
       <h2 class="abi-beerIngredientsInfo__title">{{ component.features_ingredients.title_features }}</h2>
       <p class="abi-beerIngredientsInfo__description">{{ component.features_ingredients.descrip_features }}</p>
@@ -87,7 +87,7 @@
         {% endfor %}
       </div>
       {# Only desktop #}
-      <a class="abi-beerIngredients__btnTada hidden mt-[30px] lg:flex lg:items-center lg:justify-center mx-auto w-[220px] h-[50px] font-secondary font-bold text-black text-base text-center bg-button-primary rounded-lg cursor-pointer" href="{{ component.features_ingredients.url_button_features }}">{{ component.features_ingredients.text_button_features }}</a>
+      <a class="abi-btn-compra hidden mt-[30px] lg:flex lg:items-center lg:justify-center mx-auto w-[220px] h-[50px] font-secondary font-bold text-black text-base text-center bg-button-primary rounded-lg cursor-pointer" href="{{ component.features_ingredients.url_button_features }}">{{ component.features_ingredients.text_button_features }}</a>
     </div>
     {# Bottle and Ingredients #}
     <article class="abi-beerIngredients__ingredientsWrapper ">
@@ -108,11 +108,11 @@
         <hr class="mt-3 bg-linear-1 border-transparent h-[2px]">
       {% endfor %}
     </article>
-    <a class="abi-beerIngredients__btnTada" href="{{ component.features_ingredients.url_button_features }}">{{ component.features_ingredients.text_button_features }}</a>
+    <a class="abi-btn-compra abi-beerIngredients__btnTada" href="{{ component.features_ingredients.url_button_features }}">{{ component.features_ingredients.text_button_features }}</a>
   </section>
 
   {# Inicio sección ocasiones de consumo #}
-  <section class="abi-ocasiones">
+  <section class="abi-ocasiones lg:pt-40">
     <h2 class="font-primary font-normal text-2xl text-white text-center">{{ component.consumption_occasions.title_occasions }}</h2>
     <article class="abi-ocasiones__info relative">
       <picture>
