@@ -61,6 +61,6 @@
     }
 
     .agegate__btn.main {
-        @apply font-secondary font-bold text-base bg-button-primary leading-7 w-[220px] h-[50px] rounded-md;
+        @apply font-secondary flex justify-center items-center mx-auto font-bold text-base bg-button-primary leading-7 w-[220px] h-[50px] rounded-md;
     }
 }
