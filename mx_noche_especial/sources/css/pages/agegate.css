@@ -1,6 +1,5 @@
 
 #agv2{ 
-
     .agv2__container {
         @apply block overflow-auto p-0;
 
@@ -69,4 +68,8 @@
     .agegate__btn.main {
         @apply font-secondary flex justify-center items-center mx-auto font-bold text-base bg-button-primary leading-7 w-[220px] h-[50px] rounded-md;
     }
+}
+
+body.agegate-visible{
+    @apply overflow-hidden;
 }

@@ -10,8 +10,3 @@ html {
     -moz-osx-font-smoothing: grayscale;
   }
 }
-
-div[data-drupal-messages] {
-  display: none; 
-}
-
