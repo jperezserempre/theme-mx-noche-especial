@@ -24,7 +24,11 @@ pageExist({
         if (lengthOfVideos) {
             for (let i = 0; i < lengthOfVideos; i++) {
                 thumbnailsVideos[i].addEventListener('click', (event) => {
-                    videoRender(event,'.abi-modal-video-banner__preview');
+                    videoRender({
+                        event: event,
+                        renderIn:'.abi-modal-video-banner__preview',
+                        dataId:'data-video-id'                        
+                    });
                 })
             }
         }
