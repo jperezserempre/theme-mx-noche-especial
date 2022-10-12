@@ -45,7 +45,7 @@
           {{ component.banner.descrip_v_banner }}
         </p>
       </div>
-      <div class="w-screen xl:w-[72%] relative -translate-x-1/2 left-1/2 xl:left-0 xl:transform-none">
+      <div class="w-screen md:w-auto xl:w-[72%] relative -translate-x-1/2 left-1/2 xl:left-0 xl:transform-none">
         <img class="w-full aspect-[23/12] max-w-[713px] md:mx-auto" 
         src="{{ component.banner.preview_v_banner }}"
         alt="{{ component.banner.preview_v_banner_alt }}"
@@ -195,3 +195,52 @@
 		</div>
 </div>
 {# End Modal Video#}
+{# sticky #}
+<article class="abi-sticky drop-shadow-[0_2.37456px_2.37456px_rgba(0,0,0,0.25)] z-10 fixed isolate w-[158px] h-[82px] lg:w-[266px] lg:h-[138px] top-1/2 right-2 lg:right-10 -translate-y-1/2 flex flex-wrap flex-col items-center justify-between py-1.5 px-7 lg:px-12 lg:py-2.5">
+  {# Banner sticky #}
+  <img
+    class="-z-10 pointer-events-none absolute inset-0 w-full h-full" 
+    src="/{{ directory }}/sources/images/sticky-banner.svg" 
+    alt="Conoce ganadores de cerveza pilsener" 
+    width="158" height="82" loading="lazy"
+  >
+  {# End Banner sticky #}
+  <span class="abi-sticky--close flex cursor-pointer rounded-full bg-[#E51A3D]  justify-center items-center absolute top-0 -translate-x-1/2 left-0 w-[23px] h-[23px] lg:w-[38px] lg:h-[38px]">
+    <svg width="38" height="39" viewbox="0 0 38 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M27.2896 10.2313L11 26.5209M11 10.2313L27.2896 26.5209" stroke="white" stroke-width="2.80328" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+	</span>
+  {# sticky bottle #}
+	<picture>
+		<source srcset="{{ abi_optimize_image_to_webp(directory~'/sources/images/sticky-bottle.png') }}" type="image/webp">
+		<img 
+      class="absolute right-0.5 lg:right-1 -top-4 lg:-top-7 lg:w-auto" 
+      src="/{{ directory }}/sources/images/sticky-bottle.png" 
+      width="35" height="74" 
+      alt="Cerveza Modelo Noche especial" 
+      title="Cerveza Modelo Noche especial" 
+      loading="lazy"
+    />
+	</picture>
+  {# End sticky bottle #}
+  
+	<p class="font-secondary text-white text-[7px] lg:text-xs">
+		{{'ADQUIÉRELA EN'}}
+	</p>
+  <picture>
+		<source srcset="{{ abi_optimize_image_to_webp(directory~'/sources/images/logo-tada.png') }}" type="image/webp">
+		<img 
+      class="lg:w-auto" 
+      src="/{{ directory }}/sources/images/logo-tada.png" 
+      width="66" height="28" 
+      alt="Cerveza Modelo Noche especial" 
+      title="Cerveza Modelo Noche especial" 
+      loading="lazy"
+    />
+	</picture>
+	<a class="inline-block font-secondary bg-button-primary rounded-xl px-2.5 py-1 lg:px-3 lg:py-2 text-[9px] lg:text-[15px] font-semibold" href="{{''}}">
+    {{'COMPRA EN TADA'}}
+  </a>
+</article>
+
+{# End sticky #}
