@@ -68,10 +68,13 @@
       {# Only desktop #}
       <div class="hidden lg:grid lg:grid-rows-3 lg:grid-cols-2 lg:grid-flow-col lg:gap-8">
         {% for item_features in component.features_ingredients.features %}
-            <div class="flex gap-4">
-              <img class="w-[50px] h-[50px] object-contain"  src="{{ item_features.image }}" alt="{{ item_features.image_alt }}" title="{{ item_features.image_alt }}">
-              <p class="font-secondary text-white font-normal text-base self-center">{{ item_features.description }}</p>
-            </div>
+            <div>
+              <div class="flex gap-4">
+                <img class="w-[50px] h-[50px] object-contain"  src="{{ item_features.image }}" alt="{{ item_features.image_alt }}" title="{{ item_features.image_alt }}">
+                <p class="font-secondary text-white font-normal text-base self-center">{{ item_features.description }}</p>
+              </div>
+              <hr class="mt-3 bg-linear-1 border-transparent h-[2px]">
+            </div>       
         {% endfor %}
       </div>
       {# Only desktop #}
@@ -93,6 +96,7 @@
           <img class="w-[50px] h-[50px] object-contain"  src="{{ item_features.image }}" alt="{{ item_features.image_alt }}" title="{{ item_features.image_alt }}">
           <p class="font-secondary text-white font-normal text-base self-center">{{ item_features.description }}</p>
         </div>
+        <hr class="mt-3 bg-linear-1 border-transparent h-[2px]">
       {% endfor %}
     </article>
     <a class="abi-beerIngredients__btnTada" href="{{ component.features_ingredients.url_button_features }}">{{ component.features_ingredients.text_button_features }}</a>
@@ -137,11 +141,12 @@
 
   {# INICIO COMPONENTE MAPA #}
   {% if view_map %}
-    <section id="section-3" class="page-find-it__section-three abi-great-colombia__home--map mt-16 lg:mt-40">
+    <section id="section-3" class="page-find-it__section-three abi-great-colombia__home--map relative mt-16 lg:mt-40">
+      <hr class="absolute bg-bg-map w-full h-[40%] border-transparent">
       <div id="comprar" > <!-- ANCHA PARA EL MAPA -->
-        <div class="pb-4">
-          <h2 class="font-primary text-2xl text-white mx-auto text-center w-3/5 mb-5">{{ title_block_map }}</h2>
-          <div class="page-find-it__section-three__box abi-great-colombia__home--map--searchp">
+        <div class="">
+          <h2 class="relative font-primary text-2xl text-white mx-auto text-center w-3/5 mb-5">{{ title_block_map }}</h2>
+          <div class="page-find-it__section-three__box abi-great-colombia__home--map--searchp relative">
             <div class="page-find-it__section-three__search abi-great-colombia__home--map--search--wrapper relative mb-4 w-[352px] lg:w-[860px] mx-auto">
               <input id="input-search-map" class="abi-great-colombia__home--map--search-input bg-transparent font-secondary font-normal text-white text-xs w-full h-[52px] rounded-full pl-[63px] border border-[#EEBB6F] placeholder:text-white"  type="text" placeholder="{{ placeholder_filter_map }}" />
               <svg class="absolute top-[15px] left-6" id="btn-search-map" width="25" height="27" viewBox="0 0 25 27" fill="none" xmlns="http://www.w3.org/2000/svg">

@@ -1,9 +1,8 @@
 
 #agv2{
-    .agv2__container{
-        @apply w-full bg-[url("../../sources/images/agegate-mobile.jpg")] bg-no-repeat bg-cover lg:bg-[url("../../sources/images/agegate-desktop.jpg")];
 
-    } 
+    @apply w-full  bg-[url("../../sources/images/bg-home-mobile.png")] bg-no-repeat bg-cover lg:bg-[url("../../sources/images/bg-home-desktop.png")];
+    
     .agv2__brand {
         @apply w-[188px] mb-4 ;
     }
@@ -62,6 +61,6 @@
     }
 
     .agegate__btn.main {
-        @apply font-secondary font-bold text-base bg-button-primary leading-7 w-[220px] h-[50px] rounded-md;
+        @apply font-secondary flex justify-center items-center mx-auto font-bold text-base bg-button-primary leading-7 w-[220px] h-[50px] rounded-md;
     }
 }
