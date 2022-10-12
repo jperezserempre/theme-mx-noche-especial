@@ -1,6 +1,6 @@
 <main class="abi-mainContent abi-home">
   {# Inicio Banner Video Principal #}
-  <section class="abi-videoBanner relative mb-32">
+  <section class="abi-videoBanner relative isolate mb-32 top-20 overflow-hidden">
     <div class="w-[189px] lg:w-[450px] py-[125px] lg:pt-[182px] lg:pb-[100px] ml-auto mr-[19%] md:mx-auto">
       <h1 class="pl-6 font-primary font-normal text-[6px] lg:text-xs text-white">
         {% if component.banner.firts_title_banner %}
@@ -15,29 +15,38 @@
         {{ component.banner.title_g_banner }}
       </h2>
     </div>
-    {# Flotantes con su contenedor y posicionados absolutos #}
-    <div class="absolute top-8 -left-10">
-      <picture>
-        <source srcset="/{{ directory }}/sources/images/botella-1-section1-desktop.png" media="(min-width: 1024px)">
-        <img class="" src="/{{ directory }}/sources/images/botella-1-section1-mobile.png" alt="Cerveza Modelo Noche Especial" title="Cerveza Modelo Noche Especial" >
-      </picture>
-    </div>
+    {# Floats bottles #}
+    <picture>
+      <source srcset="{{ abi_optimize_image_to_webp(directory ~ '/sources/images/botella-1-section1-desktop.png')}}" type="image/webp">
+      <img 
+        class="w-[202px] lg:w-auto -z-10 md:z-10 absolute top-7 -left-10 xl:right-1/2 xl:translate-x-[38%]" 
+        src="/{{ directory }}/sources/images/botella-1-section1-desktop.png" 
+        alt="Cerveza Modelo Noche Especial" title="Cerveza Modelo Noche Especial" 
+        width="202" height="377"
+      />
+    </picture>
+    <picture>
+      <source srcset="{{ abi_optimize_image_to_webp(directory ~ '/sources/images/botella-2-section-1-desktop.png')}}" type="image/webp">
+      <img 
+        class="absolute z-10 right-6 top-72 w-[103px] lg:w-auto lg:top-20 xl:right-1/2 xl:translate-x-[275%]" 
+        src="/{{ directory }}/sources/images/botella-2-section-1-desktop.png" 
+        alt="Cerveza Modelo Noche Especial" title="Cerveza Modelo Noche Especial"
+        width="103" height="82"
+        />
+    </picture>
 
-    <div class="absolute z-10 right-6 bottom-80">
-      <picture>
-        <source srcset="/{{ directory }}/sources/images/botella-2-section-1-desktop.png" media="(min-width: 1024px)">
-        <img class="" src="/{{ directory }}/sources/images/botella-2-section-1.png" alt="Cerveza Modelo Noche Especial" title="Cerveza Modelo Noche Especial">
-      </picture>
-    </div>
+    <picture>
+      <source srcset="{{ abi_optimize_image_to_webp(directory ~ '/sources/images/botella-3-section-1-desktop.png')}}" type="image/webp">
+      <img 
+        class="absolute -top-[5.25rem] -right-7 w-[214px] lg:w-auto lg:left-1/2 xl:translate-x-28 lg:right-0 -z-10" 
+        src="/{{ directory }}/sources/images/botella-3-section-1-desktop.png" 
+        alt="Cerveza Modelo Noche Especial" title="Cerveza Modelo Noche Especial"
+        width="177" height="225"
+      />
+    </picture>
+    {# End Floats bottles #}
 
-    <div class="absolute -top-8 right-0">
-      <picture>
-        <source srcset="/{{ directory }}/sources/images/botella-3-section-1-desktop.png" media="(min-width: 1024px)">
-        <img class="" src="/{{ directory }}/sources/images/botella-3-section-1.png" alt="Cerveza Modelo Noche Especial" title="Cerveza Modelo Noche Especial">
-      </picture>
-    </div>
-
-    <section class="abi-videoBanner__info px-5 py-8 xl:pt-[58px] xl:px-[74px] relative bottom-0 left-0 right-0 xl:flex xl:flex-wrap">
+    <section class="abi-videoBanner__info px-5 py-8 xl:pt-[58px] xl:px-[74px] relative bottom-0 left-0 right-0 xl:flex xl:flex-wrap mb-20">
       <div class="pb-7 xl:w-[28%] xl:pt-[62px] xl:pr-6">
         <h2 class="font-primary font-normal text-base pr-24 lg:pr-0 lg:mb-2.5 lg:text-2xl lg:leading-6">
           {{ component.banner.title_v_banner }}
@@ -203,7 +212,6 @@
 </div>
 {# End Modal Video#}
 {# sticky #}
-{% if component.sticky.label and component.sticky.link %}
 <article class="abi-sticky drop-shadow-[0_2.37456px_2.37456px_rgba(0,0,0,0.25)] z-10 fixed isolate w-[158px] h-[82px] lg:w-[266px] lg:h-[138px] top-1/2 right-2 lg:right-10 -translate-y-1/2 flex flex-wrap flex-col items-center justify-between py-1.5 px-7 lg:px-12 lg:py-2.5">
   {# Banner sticky #}
   <img
@@ -246,10 +254,9 @@
       loading="lazy"
     />
 	</picture>
-  <a class="inline-block font-secondary bg-button-primary rounded-xl px-2.5 py-1 lg:px-3 lg:py-2 text-[9px] lg:text-[15px] font-semibold" href="{{ component.sticky.link }}">
-    {{ component.sticky.label }}
+	<a class="inline-block font-secondary bg-button-primary rounded-xl px-2.5 py-1 lg:px-3 lg:py-2 text-[9px] lg:text-[15px] font-semibold" href="{{''}}">
+    {{'COMPRA EN TADA'}}
   </a>
 </article>
-{% endif %}
 
 {# End sticky #}
