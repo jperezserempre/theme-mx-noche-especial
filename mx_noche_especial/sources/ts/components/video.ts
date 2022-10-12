@@ -1,8 +1,8 @@
 import { VideoRender } from "../models";
 
 // lazy load youtube video
-export const videoRender = (params:VideoRender) => {
-    const { event, renderIn, dataId } = params;
+export const videoRender = (props:VideoRender) => {
+    const { event, renderIn, dataId } = props;
     // Get the video thumbnail link
     if (event.target instanceof HTMLElement) {
         const thumbnailVideo: HTMLElement | null = event.target?.closest(`[${dataId}]`);
