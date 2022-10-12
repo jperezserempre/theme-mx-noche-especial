@@ -15,7 +15,7 @@
     }
 
     .paco__main--description {
-        @apply !font-secondary !text-base !font-normal;
+        @apply !font-secondary !text-base !font-normal !text-left;
     }
 
     .paco__subscribe-form-container {
@@ -29,7 +29,7 @@
             @apply !flex !items-center !justify-center !gap-4 !my-4;
 
             label {
-                @apply !text-xs !py-0 !pl-4;
+                @apply !text-xs !py-0 !pl-4 !text-left;
 
                &:before {
                     @apply !bg-[url("../../sources/images/checkbox-unchecked.png")] !w-[21px] !h-[20px];
