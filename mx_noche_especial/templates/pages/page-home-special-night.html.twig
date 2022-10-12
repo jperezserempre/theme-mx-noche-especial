@@ -141,11 +141,12 @@
 
   {# INICIO COMPONENTE MAPA #}
   {% if view_map %}
-    <section id="section-3" class="page-find-it__section-three abi-great-colombia__home--map mt-16 lg:mt-40">
+    <section id="section-3" class="page-find-it__section-three abi-great-colombia__home--map relative mt-16 lg:mt-40">
+      <hr class="absolute bg-bg-map w-full h-[40%] border-transparent">
       <div id="comprar" > <!-- ANCHA PARA EL MAPA -->
-        <div class="pb-4">
+        <div class="">
           <h2 class="font-primary text-2xl text-white mx-auto text-center w-3/5 mb-5">{{ title_block_map }}</h2>
-          <div class="page-find-it__section-three__box abi-great-colombia__home--map--searchp">
+          <div class="page-find-it__section-three__box abi-great-colombia__home--map--searchp relative">
             <div class="page-find-it__section-three__search abi-great-colombia__home--map--search--wrapper relative mb-4 w-[352px] lg:w-[860px] mx-auto">
               <input id="input-search-map" class="abi-great-colombia__home--map--search-input bg-transparent font-secondary font-normal text-white text-xs w-full h-[52px] rounded-full pl-[63px] border border-[#EEBB6F] placeholder:text-white"  type="text" placeholder="{{ placeholder_filter_map }}" />
               <svg class="absolute top-[15px] left-6" id="btn-search-map" width="25" height="27" viewBox="0 0 25 27" fill="none" xmlns="http://www.w3.org/2000/svg">
