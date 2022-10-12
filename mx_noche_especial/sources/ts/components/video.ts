@@ -1,13 +1,16 @@
+import { VideoRender } from "../models";
+
 // lazy load youtube video
-export const videoRender = (event:Event, renderIn:string) => {
+export const videoRender = (params:VideoRender) => {
+    const { event, renderIn, dataId } = params;
     // Get the video thumbnail link
     if (event.target instanceof HTMLElement) {
-        const thumbnailVideo: HTMLElement | null = event.target?.closest(`[data-video-id]`);
+        const thumbnailVideo: HTMLElement | null = event.target?.closest(`[${dataId}]`);
         if (!thumbnailVideo) return;
         // Prevent the URL from redirecting users
         event.preventDefault();
         // Get the video url
-        let id = thumbnailVideo.getAttribute('data-video-id');
+        let id = thumbnailVideo.getAttribute(dataId);
         // // Create the player
         let player = document.createElement('div');
         player.classList.add('abi-videoRender','w-screen','aspect-[23/12]','max-w-[1062px]');

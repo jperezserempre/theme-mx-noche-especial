@@ -15,3 +15,10 @@ export interface PageExist {
     actualPage: string,
     execute: () => void
 }
+/* interface for videoRender params */
+type dataAttribute = string;
+export interface VideoRender {
+    event: Event, 
+    renderIn: string, 
+    dataId: dataAttribute
+}
