@@ -3,7 +3,9 @@
   <section class="abi-videoBanner relative mb-32">
     <div class="w-[189px] lg:w-[450px] py-[125px] lg:pt-[182px] lg:pb-[100px] ml-auto mr-[19%] md:mx-auto">
       <h1 class="pl-6 font-primary font-normal text-[6px] lg:text-xs text-white">
-        H1 Cerveza modelo Noche especial
+        {% if component.banner.firts_title_banner %}
+          {{ component.banner.firts_title_banner }}
+        {% endif %}
       </h1>
       <picture>
         <source srcset="/{{ directory }}/sources/images/NocheEspecialBrand-desktop.png" media="(min-width: 1024px)">
@@ -33,7 +35,7 @@
         <source srcset="/{{ directory }}/sources/images/botella-3-section-1-desktop.png" media="(min-width: 1024px)">
         <img class="" src="/{{ directory }}/sources/images/botella-3-section-1.png" alt="Cerveza Modelo Noche Especial" title="Cerveza Modelo Noche Especial">
       </picture>
-      
+
     </div>
 
     <section class="abi-videoBanner__info px-5 py-8 xl:pt-[58px] xl:px-[74px] relative bottom-0 left-0 right-0 xl:flex xl:flex-wrap">
@@ -46,14 +48,14 @@
         </p>
       </div>
       <div class="w-screen md:w-auto xl:w-[72%] relative -translate-x-1/2 left-1/2 xl:left-0 xl:transform-none">
-        <img class="w-full aspect-[23/12] max-w-[713px] md:mx-auto" 
+        <img class="w-full aspect-[23/12] max-w-[713px] md:mx-auto"
         src="{{ component.banner.preview_v_banner }}"
         alt="{{ component.banner.preview_v_banner_alt }}"
         title="{{ component.banner.preview_v_banner_alt }}"
         />
-        <img 
-        class="abi-videoBanner__preview absolute -translate-x-1/2 left-1/2 top-[30%] md:top-[40%]" src="/{{directory}}/sources/images/button-play.png" 
-        data-url="{{ component.banner.url_v_banner }}" 
+        <img
+        class="abi-videoBanner__preview absolute -translate-x-1/2 left-1/2 top-[30%] md:top-[40%]" src="/{{directory}}/sources/images/button-play.png"
+        data-url="{{ component.banner.url_v_banner }}"
         data-video-id="-ilTV_wDRNA"/>
       </div>
     </section>
@@ -74,7 +76,7 @@
                 <p class="font-secondary text-white font-normal text-base self-center">{{ item_features.description }}</p>
               </div>
               <hr class="mt-3 bg-linear-1 border-transparent h-[2px]">
-            </div>       
+            </div>
         {% endfor %}
       </div>
       {# Only desktop #}
@@ -177,7 +179,7 @@
 
 {# Modal Video #}
 {# activates with abi-modal--active #}
-<div class="abi-modal modal flex justify-center items-center z-20 h-full w-full inset-0 fixed backdrop-blur-md bg-[rgba(0,0,0,0.7)] lg:pt-20" id="modalYoutube"> 
+<div class="abi-modal modal flex justify-center items-center z-20 h-full w-full inset-0 fixed backdrop-blur-md bg-[rgba(0,0,0,0.7)] lg:pt-20" id="modalYoutube">
     {# modal body #}
 		<div
 			class="abi-modal__body w-screen max-w-[1062px] relative">
@@ -206,9 +208,9 @@
 <article class="abi-sticky drop-shadow-[0_2.37456px_2.37456px_rgba(0,0,0,0.25)] z-10 fixed isolate w-[158px] h-[82px] lg:w-[266px] lg:h-[138px] top-1/2 right-2 lg:right-10 -translate-y-1/2 flex flex-wrap flex-col items-center justify-between py-1.5 px-7 lg:px-12 lg:py-2.5">
   {# Banner sticky #}
   <img
-    class="-z-10 pointer-events-none absolute inset-0 w-full h-full" 
-    src="/{{ directory }}/sources/images/sticky-banner.svg" 
-    alt="Conoce ganadores de cerveza pilsener" 
+    class="-z-10 pointer-events-none absolute inset-0 w-full h-full"
+    src="/{{ directory }}/sources/images/sticky-banner.svg"
+    alt="Conoce ganadores de cerveza pilsener"
     width="158" height="82" loading="lazy"
   >
   {# End Banner sticky #}
@@ -220,28 +222,28 @@
   {# sticky bottle #}
 	<picture>
 		<source srcset="{{ abi_optimize_image_to_webp(directory~'/sources/images/sticky-bottle.png') }}" type="image/webp">
-		<img 
-      class="absolute right-0.5 lg:right-1 -top-4 lg:-top-7 lg:w-auto" 
-      src="/{{ directory }}/sources/images/sticky-bottle.png" 
-      width="35" height="74" 
-      alt="Cerveza Modelo Noche especial" 
-      title="Cerveza Modelo Noche especial" 
+		<img
+      class="absolute right-0.5 lg:right-1 -top-4 lg:-top-7 lg:w-auto"
+      src="/{{ directory }}/sources/images/sticky-bottle.png"
+      width="35" height="74"
+      alt="Cerveza Modelo Noche especial"
+      title="Cerveza Modelo Noche especial"
       loading="lazy"
     />
 	</picture>
   {# End sticky bottle #}
-  
+
 	<p class="font-secondary text-white text-[7px] lg:text-xs">
 		{{'ADQUIÉRELA EN'}}
 	</p>
   <picture>
 		<source srcset="{{ abi_optimize_image_to_webp(directory~'/sources/images/logo-tada.png') }}" type="image/webp">
-		<img 
-      class="lg:w-auto" 
-      src="/{{ directory }}/sources/images/logo-tada.png" 
-      width="66" height="28" 
-      alt="Cerveza Modelo Noche especial" 
-      title="Cerveza Modelo Noche especial" 
+		<img
+      class="lg:w-auto"
+      src="/{{ directory }}/sources/images/logo-tada.png"
+      width="66" height="28"
+      alt="Cerveza Modelo Noche especial"
+      title="Cerveza Modelo Noche especial"
       loading="lazy"
     />
 	</picture>
