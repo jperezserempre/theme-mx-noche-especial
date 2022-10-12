@@ -1,6 +1,6 @@
 <main class="abi-mainContent abi-home">
   {# Inicio Banner Video Principal #}
-  <section class="abi-videoBanner relative isolate mb-32 top-20 overflow-hidden">
+  <section class="abi-videoBanner relative isolate mb-32 top-20">
     <div class="w-[189px] lg:w-[450px] py-[125px] lg:pt-[182px] lg:pb-[100px] ml-auto mr-[19%] md:mx-auto">
       <h1 class="pl-6 font-primary font-normal text-[6px] lg:text-xs text-white">
         {% if component.banner.firts_title_banner %}
@@ -69,7 +69,7 @@
   </section>
 
   {# Inicio sección Ingredientes de la cerveza #}
-  <section class="abi-beerIngredients">
+  <section class="abi-beerIngredients lg:pt-28">
     <div class="abi-beerIngredientsInfo">
       <h2 class="abi-beerIngredientsInfo__title">{{ component.features_ingredients.title_features }}</h2>
       <p class="abi-beerIngredientsInfo__description">{{ component.features_ingredients.descrip_features }}</p>
@@ -112,7 +112,7 @@
   </section>
 
   {# Inicio sección ocasiones de consumo #}
-  <section class="abi-ocasiones">
+  <section class="abi-ocasiones lg:pt-40">
     <h2 class="font-primary font-normal text-2xl text-white text-center">{{ component.consumption_occasions.title_occasions }}</h2>
     <article class="abi-ocasiones__info relative">
       <picture>
