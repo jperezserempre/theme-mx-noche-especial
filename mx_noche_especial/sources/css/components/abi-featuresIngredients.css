@@ -8,7 +8,7 @@
             @apply lg:w-[70%] lg:pr-9;
 
             &__title {
-                @apply font-primary font-normal text-2xl lg:text-3xl text-white uppercase;
+                @apply font-primary font-normal text-2xl leading-[26px] lg:text-3xl lg:leading-9 text-white uppercase;
             }
     
             &__description {
