@@ -1,0 +1,26 @@
+#menu__paco {
+
+    @apply place-content-center !bg-header border-b-2 border-b-[#F3C450] lg:place-content-start;
+
+    .menu__paco--header {
+        .menu__header--toggle {
+            @apply hidden;       
+        }
+
+        .menu__header--logo {
+            @apply lg:!ml-[10%];
+        }
+
+        .menu__paco--wrapper {
+            @apply lg:hidden;
+        }
+    }
+
+    .menu__login--desktop {
+
+        .menu__paco--user-account {
+            @apply hidden;
+        } 
+    }
+
+}
