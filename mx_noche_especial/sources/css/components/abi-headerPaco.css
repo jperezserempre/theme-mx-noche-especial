@@ -11,9 +11,10 @@
             @apply lg:!ml-[10%];
         }
 
-        .menu__paco--wrapper {
-            @apply lg:hidden;
-        }
+    }
+
+    .menu__paco--wrapper {
+        @apply hidden;
     }
 
     .menu__login--desktop {
