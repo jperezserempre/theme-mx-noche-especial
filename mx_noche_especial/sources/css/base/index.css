@@ -11,6 +11,3 @@ html {
   }
 }
 
-div[data-drupal-messages] {
-  display: none; 
-}
