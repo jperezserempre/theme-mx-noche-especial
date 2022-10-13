@@ -5,7 +5,7 @@
         @apply w-[90%] flex flex-col mx-auto mb-16 lg:flex-row lg:max-w-[1000px] lg:max-h-[536px];
         
         &Info {
-            @apply lg:w-[70%];
+            @apply lg:w-[70%] lg:pr-9;
 
             &__title {
                 @apply font-primary font-normal text-2xl lg:text-3xl text-white uppercase;
@@ -17,7 +17,7 @@
         }
 
         &__ingredientsWrapper {
-            @apply flex gap-8 place-content-center max-h-[461px]; 
+            @apply lg:pl-9 flex gap-8 place-content-center max-h-[461px]; 
 
             div {
                 @apply flex flex-col gap-4 justify-around;
