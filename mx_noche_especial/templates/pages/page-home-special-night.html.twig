@@ -95,6 +95,7 @@
       <div>
         {% for item_ingredients in component.features_ingredients.ingredients %}
           <img src="{{ item_ingredients.image }}" alt="" title="{{ item_ingredients.image_alt }}">
+          <p class="font-fourth text-primary mx-auto tracking-[0.2em] uppercase text-sm lg:text-base">{{ item_ingredients.description }}</p>
         {% endfor %}
       </div>
     </article>
@@ -113,20 +114,25 @@
 
   {# Inicio sección ocasiones de consumo #}
   <section class="abi-ocasiones lg:pt-40 mb-8 lg:mb-20">
-    <h2 class="font-primary font-normal text-2xl text-white text-center">{{ component.consumption_occasions.title_occasions }}</h2>
+    <h2 class="font-primary font-normal text-2xl text-white text-center">
+    {{ component.consumption_occasions.title_occasions }}
+    </h2>
     <article class="abi-ocasiones__info relative">
       <picture>
         <source srcset="/{{ directory }}/sources/images/bg-ocasiones-desktop.jpg" media="(min-width: 1024px)">
         <img class="absolute w-full inset-0 h-full lg:max-h-[632px]" src="/{{ directory }}/sources/images/bg-ocasiones-mobile.jpg" alt="" title="">
       </picture>
-      <div class="relative flex p-4 md:p-8 mt-48 lg:mt-52 md:mt-32">
+      <div class="relative flex p-4 md:p-8 mt-36 lg:mt-52 md:mt-32">
         <div class="w-1/2 lg:w-full">
           <div class="relative flex flex-col lg:flex-wrap lg:flex-row lg:justify-between gap-8 lg:gap-x-[12%] -mt-[50%] lg:-mt-[15%] md:mt-0">
             {% for item_occasions in component.consumption_occasions.occasions %}
               <div class="abi-ocasiones__card lg:w-[28%]">
-                <img class="max-w-[155px] lg:max-w-none lg:w-full" src="{{ item_occasions.image }}" alt="{{ item_occasions.image_alt }}" title="{{ item_occasions.title }}">
-                <h3 class="font-primary text-base text-white font-normal lg:text-2xl">{{ item_occasions.title }}</h3>
-                <p class="font-secondary text-sm text-white font-normal" >{{ item_occasions.description }}</p>
+                <picture>
+                  <source srcset="{{ abi_optimize_image_to_webp( item_occasions.image ) }}">
+                  <img class="max-w-[155px] lg:max-w-none lg:w-full" src="{{ item_occasions.image }}" alt="{{ item_occasions.image_alt }}" title="{{ item_occasions.title }}" width="155" heigth="102">
+                </picture>
+                <h3 class="py-1.5 lg:py-3.5 font-primary text-base text-white font-normal lg:text-2xl lg:leading-7">{{ item_occasions.title }}</h3>
+                <p class="font-secondary text-sm leading-4 text-white font-normal" >{{ item_occasions.description }}</p>
               </div>
             {% endfor %}
           </div>
@@ -136,10 +142,10 @@
             <div class="relative flex place-content-center place-items-center">
               <img class="" src="{{ component.consumption_occasions.image_occasions }}" alt="{{ component.consumption_occasions.image_occasions_alt }}" title="{{ component.consumption_occasions.image_occasions_alt }}">
               <p class="font-fifth text-white tracking-widest uppercase text-sm font-medium absolute top-[85%]">Botella 355ml</p>
-              <p class="font-secondary text-base text-white font-bold absolute top-[92%]">{{ component.consumption_occasions.text_occasions }}</p>
+              <p class="font-secondary text-base leading-4 text-white font-bold absolute top-[92%]">{{ component.consumption_occasions.text_occasions }}</p>
             </div>
-            <a class="btn-ocasions-tada bg-button-primary font-secondary text-sm font-bold w-[148px] h-[45px] rounded-md flex justify-center items-center text-center mb-4 leading-4" href="{{ component.consumption_occasions.url_button_one_occasions }}">{{ component.consumption_occasions.text_button_one_occasions }}</a>
-            <a class="btn-ocasions-wallmart bg-button-primary font-secondary text-sm font-bold w-[148px] h-[45px] rounded-md flex justify-center items-center text-center leading-4" href="{{ component.consumption_occasions.url_button_two_occasionss }}">{{ component.consumption_occasions.text_button_two_occasions }}</a>
+            <a class="btn-ocasions-tada bg-button-primary font-secondary text-sm font-bold w-[86%] sm:w-[148px] lg:w-[198px] py-4 rounded-md flex justify-center items-center text-center mb-4 leading-4" href="{{ component.consumption_occasions.url_button_one_occasions }}">{{ component.consumption_occasions.text_button_one_occasions }}</a>
+            <a class="btn-ocasions-wallmart bg-button-primary font-secondary text-sm font-bold w-[86%] sm:w-[148px] lg:w-[198px] py-4 rounded-md flex justify-center items-center text-center leading-4" href="{{ component.consumption_occasions.url_button_two_occasionss }}">{{ component.consumption_occasions.text_button_two_occasions }}</a>
           </div>
         </div>
       </div>
