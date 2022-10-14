@@ -1,6 +1,6 @@
 <main class="abi-mainContent abi-home overflow-x-hidden">
   {# Inicio Banner Video Principal #}
-  <section class="abi-videoBanner relative isolate">
+  <section class="abi-videoBanner relative isolate max-w-[1120px] mx-auto">
     <div class="w-[189px] lg:w-[450px] py-[125px] lg:pt-[182px] lg:pb-[100px] ml-auto mr-[19%] md:mx-auto">
       <h1 class="pl-6 font-primary font-normal text-[6px] text-opacity-50 lg:text-xs text-white">
         {% if component.banner.firts_title_banner %}
@@ -23,7 +23,7 @@
     <picture>
       <source srcset="{{ abi_optimize_image_to_webp(directory ~ '/sources/images/botella-1-section1-desktop.png')}}" type="image/webp">
       <img
-        class="w-[202px] lg:w-auto -z-10 md:z-10 absolute top-7 -left-10 xl:right-1/2 xl:translate-x-[38%]"
+        class="w-[202px] lg:w-auto -z-10 md:z-10 absolute top-7 -left-10 xl:right-1/2"
         src="/{{ directory }}/sources/images/botella-1-section1-desktop.png"
         alt="Cerveza Modelo Noche Especial" title="Cerveza Modelo Noche Especial"
         width="202" height="377"
