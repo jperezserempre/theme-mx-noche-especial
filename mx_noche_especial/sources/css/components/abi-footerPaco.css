@@ -9,6 +9,7 @@
     }
 
     .paco__main--subscription-brand-logo {
+        @apply !my-3;
         img {
             @apply !w-[152px];
         } 
