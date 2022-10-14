@@ -57,7 +57,7 @@
     }
 
     .paco-bottom-menu-whitte {
-        @apply !font-secondary !text-xs !font-normal;
+        @apply !font-secondary !text-xs !font-normal !text-left;
 
         ul {
             @apply !gap-4;
