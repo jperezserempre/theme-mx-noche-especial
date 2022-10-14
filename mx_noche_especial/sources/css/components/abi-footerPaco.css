@@ -1,7 +1,7 @@
 
 #footer__paco {
     .paco__main {
-        @apply !w-full !bg-[url("../../sources/images/bg-footerPaco-mobile.jpg")] !bg-no-repeat !bg-cover lg:!bg-[url("../../sources/images/bg-footerPaco-desktop.jpg")];
+        @apply !w-full !bg-[url("../../sources/images/bg-footerPaco-mobile.webp")] !bg-no-repeat !bg-cover lg:!bg-[url("../../sources/images/bg-footerPaco-desktop.webp")];
     }
 
     .footer__paco--disclaimer-up {
