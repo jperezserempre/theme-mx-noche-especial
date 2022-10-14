@@ -62,11 +62,12 @@
         title="{{ component.banner.preview_v_banner_alt }}"
         />
         <img
-        class="abi-videoBanner__preview absolute -translate-x-1/2 w-[49px] h-[49px] lg:w-[65px] lg:h-[65px] left-1/2 top-[30%] md:top-[40%]" 
+        class="abi-videoBanner__preview absolute -translate-x-1/2 w-[49px] h-[49px] lg:w-[65px] lg:h-[65px] left-1/2 top-[30%] md:top-[40%]"
         src="/{{directory}}/sources/images/button-play.png"
         alt="Video de cerveza Modelo" title="Video de cerveza Modelo"
         width="49" height="49"
         data-video-id="{{ component.banner.url_v_banner }}"
+        data-url="{{ component.banner.url_v_banner }}" />
       </div>
     </section>
   </section>
@@ -82,9 +83,9 @@
         {% for item_features in component.features_ingredients.features %}
             <div class="" >
               <div class="flex space-x-4">
-                <img 
-                class="w-[50px] h-[50px] object-contain" 
-                src="{{ item_features.image }}" 
+                <img
+                class="w-[50px] h-[50px] object-contain"
+                src="{{ item_features.image }}"
                 alt="{{ item_features.image_alt }}" title="{{ item_features.image_alt }}"
                 loading="lazy">
                 <h3 class="font-secondary text-white font-normal text-base self-center">
@@ -283,8 +284,8 @@
       loading="lazy"
     />
 	</picture>
-	<a 
-    class="inline-block font-secondary bg-button-primary rounded-xl px-2.5 py-1 lg:px-3 lg:py-2 text-[9px] lg:text-[15px] font-semibold" 
+	<a
+    class="inline-block font-secondary bg-button-primary rounded-xl px-2.5 py-1 lg:px-3 lg:py-2 text-[9px] lg:text-[15px] font-semibold"
     href="{{ component.sticky.link}}">
     {{ component.sticky.label}}
   </a>
