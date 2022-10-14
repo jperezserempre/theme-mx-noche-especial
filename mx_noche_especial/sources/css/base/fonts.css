@@ -75,6 +75,16 @@
 }
 
 @font-face {
+  font-family: MuseoSans;
+  font-style: normal;
+  font-weight: 700;
+  src:  url('../../sources/fonts/Museo-Sans-900.eot') format('eot'),
+        url('../../sources/fonts/Museo-Sans-900.woff') format('woff'),
+        url('../../sources/fonts/Museo-Sans-900.woff2') format('woff2'); 
+  font-display: swap;
+}
+
+@font-face {
   font-family: Poppins;
   font-style: normal;
   font-weight: 400;
