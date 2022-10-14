@@ -82,6 +82,16 @@
           setCookieTapit();
           $("body").removeClass("agegate-visible");
           $("#agv2").remove();
+
+          dataLayer.push({
+            'event': 'GAEvent',
+            'event_category': 'Age Gate',
+            'event_action': 'Interaction',
+            'event_label': 'Send',
+            'interaction':'False',
+            'component_name': 'Entrar',
+            'element_text': 'Entrar_Noche_Especial',
+          });
           // location.reload();
           //history.go(0);
         });
@@ -213,17 +223,6 @@
           if (day.length === 2 && month.length === 2 && year.length === 4) {
             ageUser = validateAge(day + '.' + month + '.' + year);
             if (parseFloat(ageUser) >= 18) {
-
-              dataLayer.push({
-                'event': 'GAEvent',
-                'event_category': 'Age Gate',
-                'event_action': 'Interaction',
-                'event_label': 'Send',
-                'interaction':'False',
-                'component_name': 'Entrar',
-                'element_text': 'Entrar_Noche_Especial',
-              });
-
               $btnAgeGate.show();
             } else {
 
