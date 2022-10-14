@@ -3,8 +3,13 @@
     .agv2__container {
         @apply block overflow-auto p-0;
 
+        
         .abi-ageGate__wrapper {
-            @apply w-full bg-[url("../../sources/images/bg-home-mobile.png")] bg-no-repeat bg-cover lg:bg-[url("../../sources/images/bg-home-desktop.png")];
+            @apply w-full bg-[url("../../sources/images/agegate-mobile.png")] bg-no-repeat bg-cover xl:bg-[url("../../sources/images/agegate-desktop.png")];
+        
+            .agv2__wrapper {
+                @apply !max-w-[600px] !py-20 !px-4;
+            }
         }
     }
 
