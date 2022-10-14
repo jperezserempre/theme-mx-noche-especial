@@ -114,7 +114,9 @@
 
   {# Inicio sección ocasiones de consumo #}
   <section class="abi-ocasiones lg:pt-40 mb-8 lg:mb-20">
-    <h2 class="font-primary font-normal text-2xl text-white text-center">{{ component.consumption_occasions.title_occasions }}</h2>
+    <h2 class="font-primary font-normal text-2xl text-white text-center">
+    {{ component.consumption_occasions.title_occasions }}
+    </h2>
     <article class="abi-ocasiones__info relative">
       <picture>
         <source srcset="/{{ directory }}/sources/images/bg-ocasiones-desktop.jpg" media="(min-width: 1024px)">
@@ -125,8 +127,11 @@
           <div class="relative flex flex-col lg:flex-wrap lg:flex-row lg:justify-between gap-8 lg:gap-x-[12%] -mt-[50%] lg:-mt-[15%] md:mt-0">
             {% for item_occasions in component.consumption_occasions.occasions %}
               <div class="abi-ocasiones__card lg:w-[28%]">
-                <img class="max-w-[155px] lg:max-w-none lg:w-full" src="{{ item_occasions.image }}" alt="{{ item_occasions.image_alt }}" title="{{ item_occasions.title }}">
-                <h3 class="font-primary text-base text-white font-normal lg:text-2xl">{{ item_occasions.title }}</h3>
+                <picture>
+                  <source srcset="{{ abi_optimize_image_to_webp( item_occasions.image ) }}">
+                  <img class="max-w-[155px] lg:max-w-none lg:w-full" src="{{ item_occasions.image }}" alt="{{ item_occasions.image_alt }}" title="{{ item_occasions.title }}" width="155" heigth="102">
+                </picture>
+                <h3 class="pt-1.5 lg:pt-3.5 font-primary text-base text-white font-normal lg:text-2xl">{{ item_occasions.title }}</h3>
                 <p class="font-secondary text-sm text-white font-normal" >{{ item_occasions.description }}</p>
               </div>
             {% endfor %}
