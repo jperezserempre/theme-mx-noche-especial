@@ -139,8 +139,8 @@
     </h2>
     <article class="abi-ocasiones__info relative">
       <picture>
-        <source srcset="/{{ directory }}/sources/images/bg-ocasiones-desktop.jpg" media="(min-width: 1024px)">
-        <img class="absolute w-full inset-0 h-full lg:max-h-[632px]" src="/{{ directory }}/sources/images/bg-ocasiones-mobile.jpg" alt="" title="">
+        <source srcset=" {{ abi_optimize_image_to_webp (directory ~ '/sources/images/bg-ocasiones-desktop.jpg')}}" media="(min-width: 1024px)">
+        <img class="absolute w-full inset-0 h-full lg:max-h-[632px]" src="{{ abi_optimize_image_to_webp (directory ~ '/sources/images/bg-ocasiones-mobile.jpg')}}">
       </picture>
       <div class="relative flex p-4 md:p-8 mt-36 lg:mt-52 md:mt-32">
         <div class="w-1/2 lg:w-full">
@@ -160,7 +160,10 @@
         <div class="w-1/2 lg:absolute lg:w-[50%] lg:-translate-x-1/2 lg:left-1/2 -top-[30%]">
           <div class="relative flex flex-col justify-center items-center -mt-[90%] md:mt-0">
             <div class="relative flex place-content-center place-items-center">
-              <img class="" src="{{ component.consumption_occasions.image_occasions }}" alt="{{ component.consumption_occasions.image_occasions_alt }}" title="{{ component.consumption_occasions.image_occasions_alt }}">
+              <picture>
+                <source srcset="{{ abi_optimize_image_to_webp( component.consumption_occasions.image_occasions ) }}" type="image/webp">
+                <img class="" src="{{ component.consumption_occasions.image_occasions }}" alt="{{ component.consumption_occasions.image_occasions_alt }}" title="{{ component.consumption_occasions.image_occasions_alt }}">
+              </picture>
               <p class="font-fifth text-white tracking-widest uppercase text-sm font-medium absolute top-[85%]">Botella 355ml</p>
               <p class="font-secondary text-base leading-4 text-white font-bold absolute top-[92%]">{{ component.consumption_occasions.text_occasions }}</p>
             </div>
