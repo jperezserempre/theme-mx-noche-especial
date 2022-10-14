@@ -8,8 +8,8 @@
         {% endif %}
       </h1>
       <picture>
-        <source srcset="/{{ directory }}/sources/images/NocheEspecialBrand-desktop.png" media="(min-width: 1024px)">
-        <img class="" src="/{{directory}}/sources/images/NocheEspecialBrand.png" alt="Logo de Cerveza Modelo" title="Logo de Cerveza Modelo" width="100%" height="100%">
+        <source srcset=" {{ abi_optimize_image_to_webp (directory ~ '/sources/images/NocheEspecialBrand-desktop.png')}}" media="(min-width: 1024px)">
+        <img  src="{{ abi_optimize_image_to_webp (directory ~ '/sources/images/NocheEspecialBrand.png')}}" alt="Logo de Cerveza Modelo" title="Logo de Cerveza Modelo" width="100%" height="100%">
       </picture>
       <h2 class="pl-6 font-third font-normal text-2xl lg:text-6xl text-white">
         {{ component.banner.title_g_banner }}
