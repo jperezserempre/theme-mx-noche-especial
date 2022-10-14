@@ -5,7 +5,7 @@
 
         
         .abi-ageGate__wrapper {
-            @apply w-full bg-[url("../../sources/images/agegate-mobile.png")] bg-no-repeat bg-cover xl:bg-[url("../../sources/images/agegate-desktop.png")];
+            @apply w-full bg-[url("../../sources/images/agegate-mobile.webp")] bg-no-repeat bg-cover xl:bg-[url("../../sources/images/agegate-desktop.webp")];
         
             .agv2__wrapper {
                 @apply !max-w-[600px] !py-20 !px-4;

@@ -1,11 +1,11 @@
 .abi-mainContent {
-    @apply w-full bg-[url("../../sources/images/bg-home-mobile.png")] bg-no-repeat bg-cover lg:bg-[url("../../sources/images/bg-home-desktop.png")];
+    @apply w-full bg-[url("../../sources/images/bg-home-mobile.webp")] bg-no-repeat bg-cover lg:bg-[url("../../sources/images/bg-home-desktop.webp")];
 }
 
 .abi-videoBanner {
 
     &__info {
-        @apply w-[90%] h-[475px] xl:max-w-[1141px] xl:max-h-[360px] mx-auto bg-[url("../../sources/images/bg-section1-mobile.png")] bg-no-repeat bg-cover lg:bg-[url("../../sources/images/bg-section1-desktop.png")]; 
+        @apply w-[90%] h-[475px] xl:max-w-[1141px] xl:max-h-[360px] mx-auto bg-[url("../../sources/images/bg-section1-mobile.webp")] bg-no-repeat bg-cover lg:bg-[url("../../sources/images/bg-section1-desktop.webp")]; 
     }
 }
 
