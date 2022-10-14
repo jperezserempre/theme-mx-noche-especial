@@ -9,7 +9,11 @@
       </h1>
       <picture>
         <source srcset=" {{ abi_optimize_image_to_webp (directory ~ '/sources/images/NocheEspecialBrand-desktop.png')}}" media="(min-width: 1024px)">
-        <img  src="{{ abi_optimize_image_to_webp (directory ~ '/sources/images/NocheEspecialBrand.png')}}" alt="Logo de Cerveza Modelo" title="Logo de Cerveza Modelo" width="100%" height="100%">
+        <img  
+        src="{{ abi_optimize_image_to_webp (directory ~ '/sources/images/NocheEspecialBrand.png')}}" 
+        alt="Logo de Cerveza Modelo" title="Logo de Cerveza Modelo" width="100%" height="100%"
+        
+        >
       </picture>
       <h2 class="pl-6 font-third font-normal text-2xl lg:text-6xl text-white">
         {{ component.banner.title_g_banner }}
@@ -56,18 +60,30 @@
         </p>
       </div>
       <div class="w-screen md:w-auto xl:w-[72%] relative -translate-x-1/2 left-1/2 xl:left-0 xl:transform-none">
-        <img class="w-full aspect-[23/12] max-w-[713px] md:mx-auto"
-        src="{{ component.banner.preview_v_banner }}"
-        alt="{{ component.banner.preview_v_banner_alt }}"
-        title="{{ component.banner.preview_v_banner_alt }}"
-        />
-        <img
-        class="abi-videoBanner__preview absolute -translate-x-1/2 w-[49px] h-[49px] lg:w-[65px] lg:h-[65px] left-1/2 top-[30%] md:top-[40%]"
-        src="/{{directory}}/sources/images/button-play.png"
-        alt="Video de cerveza Modelo" title="Video de cerveza Modelo"
-        width="49" height="49"
-        data-video-id="{{ component.banner.url_v_banner }}"
-        data-url="{{ component.banner.url_v_banner }}" />
+        <picture>
+          <source srcset="{{ abi_optimize_image_to_webp( component.banner.preview_v_banner ) }}" type="image/webp"/>
+          <img 
+            class="w-full aspect-[23/12] max-w-[713px] md:mx-auto"
+            src="{{ component.banner.preview_v_banner }}"
+            alt="{{ component.banner.preview_v_banner_alt }}"
+            title="{{ component.banner.preview_v_banner_alt }}"
+            loading="lazy"
+            width="375" height="196"
+          />
+        </picture>
+        <picture>
+          <source srcset="{{ abi_optimize_image_to_webp( directory ~ '/sources/images/button-play.png' ) }}" type="image/webp"/>
+          <img
+            class="abi-videoBanner__preview absolute -translate-x-1/2 w-[49px] h-[49px] lg:w-[65px] lg:h-[65px] left-1/2 top-[30%] md:top-[40%]"
+            src="/{{directory}}/sources/images/button-play.png"
+            alt="Video de cerveza Modelo" title="Video de cerveza Modelo"
+            width="49" height="49"
+            data-video-id="{{ component.banner.url_v_banner }}"
+            data-url="{{ component.banner.url_v_banner }}" 
+            loading="lazy"
+          />
+        </picture>
+        
       </div>
     </section>
   </section>
@@ -83,13 +99,18 @@
         {% for item_features in component.features_ingredients.features %}
             <div class="" >
               <div class="flex space-x-4">
-                <img
-                class="w-[50px] h-[50px] object-contain"
-                src="{{ item_features.image }}"
-                alt="{{ item_features.image_alt }}" title="{{ item_features.image_alt }}"
-                loading="lazy">
+                <picture>
+                  <source srcset=" {{ abi_optimize_image_to_webp( item_features.image ) }}" type="image/webp" />
+                  <img
+                  class="w-[50px] h-[50px] object-contain"
+                  src="{{ item_features.image }}"
+                  alt="{{ item_features.image_alt }}" title="{{ item_features.image_alt }}"
+                  loading="lazy"
+                  width="50" height="50"
+                  />
+                </picture>
                 <h3 class="font-secondary text-white font-normal text-base self-center">
-                {{ item_features.description }}
+                  {{ item_features.description }}
                 </h3>
               </div>
               <hr class="mt-3 bg-linear-1 border-transparent h-[2px] {{ (loop.index % 3) == 0 ? 'hidden'}}">
@@ -102,14 +123,22 @@
     {# Bottle and Ingredients #}
     <article class="abi-beerIngredients__ingredientsWrapper ">
       <picture>
-      <source srcset="{{ abi_optimize_image_to_webp(component.features_ingredients.image_features) }}" type="image/webp">
-        <img class="max-h-[441px]" src="{{ component.features_ingredients.image_features }}" alt="{{ component.features_ingredients.image_features_alt }}" title="{{ component.features_ingredients.image_features_alt }}">
+        <source srcset="{{ abi_optimize_image_to_webp(component.features_ingredients.image_features) }}" type="image/webp">
+        <img class="lg:w-[175px] " src="{{ component.features_ingredients.image_features }}" 
+        alt="{{ component.features_ingredients.image_features_alt }}" 
+        title="{{ component.features_ingredients.image_features_alt }}" 
+        width="155" height="388"
+        loading="lazy">
       </picture>
       <div>
         {% for item_ingredients in component.features_ingredients.ingredients %}
           <picture>
             <source srcset="{{ abi_optimize_image_to_webp( item_ingredients.image ) }}" type="image/webp">
-            <img class="mx-auto w-[45px] lg:w-[51px] h-[45px] lg:h-[51px]" src="{{ item_ingredients.image }}" alt="{{ item_ingredients.image_alt }}" title="{{ item_ingredients.image_alt }}">
+            <img class="mx-auto w-[45px] lg:w-[51px] h-[45px] lg:h-[51px]" src="{{ item_ingredients.image }}" 
+            alt="{{ item_ingredients.image_alt }}" title="{{ item_ingredients.image_alt }}"
+            width="45" height="45"
+            loading="lazy"
+            >
           </picture>
           <p class="font-fourth text-primary mx-auto tracking-[0.2em] uppercase text-sm lg:text-base">{{ item_ingredients.description }}</p>
         {% endfor %}
@@ -121,7 +150,12 @@
         <div class="py-5 flex space-x-4">
           <picture>
             <source srcset="{{ abi_optimize_image_to_webp(item_features.image) }}" type="image/webp">
-            <img class="w-[50px] h-[50px] object-contain"  src="{{ item_features.image }}" alt="{{ item_features.image_alt }}" title="{{ item_features.image_alt }}">
+            <img class="w-[50px] h-[50px] object-contain"  
+            src="{{ item_features.image }}" 
+            alt="{{ item_features.image_alt }}" title="{{ item_features.image_alt }}"
+            loading="lazy"
+            width="50" height="50"
+            >
           </picture>
           <p class="font-secondary text-white font-normal text-base self-center">
             {{ item_features.description }}
@@ -141,7 +175,13 @@
     <article class="abi-ocasiones__info relative">
       <picture>
         <source srcset=" {{ abi_optimize_image_to_webp (directory ~ '/sources/images/bg-ocasiones-desktop.jpg')}}" media="(min-width: 1024px)">
-        <img class="absolute w-full inset-0 h-full lg:max-h-[632px]" src="{{ abi_optimize_image_to_webp (directory ~ '/sources/images/bg-ocasiones-mobile.jpg')}}">
+        <img class="absolute w-full inset-0 h-full lg:max-h-[632px]" 
+        src="{{ abi_optimize_image_to_webp (directory ~ '/sources/images/bg-ocasiones-mobile.jpg')}}"
+        loading="lazy"
+        alt="Cerveza Modelo"
+        title="Cerveza Modelo"
+        width="100%" height="100%"
+        />
       </picture>
       <div class="relative flex p-4 md:p-8 mt-36 lg:mt-52 md:mt-32">
         <div class="w-1/2 lg:w-full">
@@ -150,7 +190,12 @@
               <div class="abi-ocasiones__card lg:w-[28%]">
                 <picture>
                   <source srcset="{{ abi_optimize_image_to_webp( item_occasions.image ) }}" type="image/webp">
-                  <img class="max-w-[155px] lg:max-w-none lg:w-full" src="{{ item_occasions.image }}" alt="{{ item_occasions.image_alt }}" title="{{ item_occasions.title }}" width="155" heigth="102">
+                  <img class="max-w-[155px] lg:max-w-none lg:w-full" 
+                  src="{{ item_occasions.image }}" 
+                  alt="{{ item_occasions.image_alt }}" title="{{ item_occasions.title }}" 
+                  width="155" heigth="102"
+                  loading="lazy"
+                  >
                 </picture>
                 <h3 class="py-1.5 lg:py-3.5 font-primary text-base text-white font-normal lg:text-2xl lg:leading-7">{{ item_occasions.title }}</h3>
                 <p class="font-secondary text-sm leading-4 text-white font-normal" >{{ item_occasions.description }}</p>
@@ -162,8 +207,14 @@
           <div class="relative flex flex-col justify-center items-center -mt-[90%] md:mt-0">
             <div class="relative flex place-content-center place-items-center">
               <picture>
-                <source srcset="{{ abi_optimize_image_to_webp( component.consumption_occasions.image_occasions ) }}" type="image/webp">
-                <img class="" src="{{ component.consumption_occasions.image_occasions }}" alt="{{ component.consumption_occasions.image_occasions_alt }}" title="{{ component.consumption_occasions.image_occasions_alt }}">
+                <source srcset="{{ abi_optimize_image_to_webp( component.consumption_occasions.image_occasions ) }}" type="image/webp"/>
+                <img class=" lg:w-[246px]" 
+                src="{{ component.consumption_occasions.image_occasions }}" 
+                alt="{{ component.consumption_occasions.image_occasions_alt }}" 
+                title="{{ component.consumption_occasions.image_occasions_alt }}"
+                loading="lazy"
+                width="180" height="413"
+                >
               </picture>
               <p class="font-fifth text-white tracking-widest uppercase text-sm font-medium absolute top-[85%]">Botella 355ml</p>
               <p class="font-secondary text-base leading-4 text-white font-bold absolute top-[92%]">{{ component.consumption_occasions.text_occasions }}</p>
@@ -244,12 +295,15 @@
 {# sticky #}
 <article class="abi-sticky drop-shadow-[0_2.37456px_2.37456px_rgba(0,0,0,0.25)] z-10 fixed isolate w-[158px] h-[82px] lg:w-[266px] lg:h-[138px] top-1/2 right-2 lg:right-10 -translate-y-1/2 flex flex-wrap flex-col items-center justify-between py-1.5 px-7 lg:px-12 lg:py-2.5">
   {# Banner sticky #}
-  <img
-    class="-z-10 pointer-events-none absolute inset-0 w-full h-full"
-    src="/{{ directory }}/sources/images/sticky-banner.svg"
-    alt="Conoce ganadores de cerveza pilsener"
-    width="158" height="82" loading="lazy"
-  >
+  <picture>
+    <source srcset="{{ abi_optimize_image_to_webp(directory~'/sources/images/sticky-banner.svg') }}" type="image/webp" />
+    <img
+      class="-z-10 pointer-events-none absolute inset-0 w-full h-full"
+      src="/{{ directory }}/sources/images/sticky-banner.svg"
+      alt="Conoce ganadores de cerveza pilsener"
+      width="158" height="82" loading="lazy"
+    />
+  </picture>
   {# End Banner sticky #}
   <span class="abi-sticky--close flex cursor-pointer rounded-full bg-[#E51A3D]  justify-center items-center absolute top-0 -translate-x-1/2 left-0 w-[23px] h-[23px] lg:w-[38px] lg:h-[38px]">
     <svg width="38" height="39" viewbox="0 0 38 39" fill="none" xmlns="http://www.w3.org/2000/svg">
