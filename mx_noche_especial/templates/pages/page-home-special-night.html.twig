@@ -71,7 +71,7 @@
   {# Inicio sección Ingredientes de la cerveza #}
   <section class="abi-beerIngredients lg:pt-28">
     <div class="abi-beerIngredientsInfo">
-      <h2 class="abi-beerIngredientsInfo__title">{{ component.features_ingredients.title_features }}</h2>
+      <h2 class="abi-beerIngredientsInfo__title lg:w-[562px]">{{ component.features_ingredients.title_features }}</h2>
       <p class="abi-beerIngredientsInfo__description">{{ component.features_ingredients.descrip_features }}</p>
 
       {# Only desktop #}
@@ -91,11 +91,17 @@
     </div>
     {# Bottle and Ingredients #}
     <article class="abi-beerIngredients__ingredientsWrapper ">
-      <img class="max-h-[441px]" src="{{ component.features_ingredients.image_features }}" alt="{{ component.features_ingredients.image_features_alt }}" title="">
+      <picture>
+      <source srcset="{{ abi_optimize_image_to_webp(component.features_ingredients.image_features) }}" type="image/webp">
+        <img class="max-h-[441px]" src="{{ component.features_ingredients.image_features }}" alt="{{ component.features_ingredients.image_features_alt }}" title="{{ component.features_ingredients.image_features_alt }}">
+      </picture>
       <div>
         {% for item_ingredients in component.features_ingredients.ingredients %}
-          <img class="mx-auto w-[45px] lg:w-[51px]" src="{{ abi_optimize_image_to_webp( item_ingredients.image )}}" alt="" title="{{ item_ingredients.image_alt }}">
-          <p class="font-fo urth text-primary mx-auto tracking-[0.2em] uppercase text-sm lg:text-base">{{ item_ingredients.description }}</p>
+          <picture>
+            <source srcset="{{ abi_optimize_image_to_webp( item_ingredients.image ) }}" type="image/webp">
+            <img class="mx-auto w-[45px] lg:w-[51px] h-[45px] lg:h-[51px]" src="{{ item_ingredients.image }}" alt="{{ item_ingredients.image_alt }}" title="{{ item_ingredients.image_alt }}">
+          </picture>
+          <p class="font-fourth text-primary mx-auto tracking-[0.2em] uppercase text-sm lg:text-base">{{ item_ingredients.description }}</p>
         {% endfor %}
       </div>
     </article>
@@ -103,7 +109,10 @@
     <article class="my-8 flex flex-col gap-y-2 lg:hidden">
       {% for item_features in component.features_ingredients.features %}
         <div class="py-5 flex space-x-4">
-          <img class="w-[50px] h-[50px] object-contain"  src="{{ item_features.image }}" alt="{{ item_features.image_alt }}" title="{{ item_features.image_alt }}">
+          <picture>
+            <source srcset="{{ abi_optimize_image_to_webp(item_features.image) }}" type="image/webp">
+            <img class="w-[50px] h-[50px] object-contain"  src="{{ item_features.image }}" alt="{{ item_features.image_alt }}" title="{{ item_features.image_alt }}">
+          </picture>
           <p class="font-secondary text-white font-normal text-base self-center">{{ item_features.description }}</p>
         </div>
         <hr class="mt-3 bg-linear-1 border-transparent h-[2px]">
@@ -128,7 +137,7 @@
             {% for item_occasions in component.consumption_occasions.occasions %}
               <div class="abi-ocasiones__card lg:w-[28%]">
                 <picture>
-                  <source srcset="{{ abi_optimize_image_to_webp( item_occasions.image ) }}">
+                  <source srcset="{{ abi_optimize_image_to_webp( item_occasions.image ) }}" type="image/webp">
                   <img class="max-w-[155px] lg:max-w-none lg:w-full" src="{{ item_occasions.image }}" alt="{{ item_occasions.image_alt }}" title="{{ item_occasions.title }}" width="155" heigth="102">
                 </picture>
                 <h3 class="py-1.5 lg:py-3.5 font-primary text-base text-white font-normal lg:text-2xl lg:leading-7">{{ item_occasions.title }}</h3>
