@@ -16,7 +16,7 @@ export const videoRender = (props:VideoRender) => {
         player.classList.add('abi-videoRender','w-screen','aspect-[23/12]','max-w-[1062px]');
         player.innerHTML = `
                 <iframe
-                    load="lazy"
+                    loading="lazy"
                     class="w-full h-full"
                     style="aspect-ratio: 125 / 50;" width="100%" height="100%"
                     src="https://www.youtube-nocookie.com/embed/${id}?autoplay=1"
