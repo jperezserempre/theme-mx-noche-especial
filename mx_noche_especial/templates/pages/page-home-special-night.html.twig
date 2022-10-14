@@ -95,6 +95,7 @@
       <div>
         {% for item_ingredients in component.features_ingredients.ingredients %}
           <img src="{{ item_ingredients.image }}" alt="" title="{{ item_ingredients.image_alt }}">
+          <p class="font-fourth text-primary mx-auto tracking-[0.2em] uppercase text-sm lg:text-base">{{ item_ingredients.description }}</p>
         {% endfor %}
       </div>
     </article>

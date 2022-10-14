@@ -11,3 +11,6 @@ html {
   }
 }
 
+div[data-drupal-messages] {
+  @apply hidden;
+}
