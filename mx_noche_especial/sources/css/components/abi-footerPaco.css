@@ -55,24 +55,26 @@
     } 
 
     .paco__main--title-social {
-        @apply !font-primary !text-sm !text-white !font-normal;
+        @apply !font-primary !text-sm !text-white !font-normal lg:opacity-0;
+    }
+    .paco__main--social{
+        .menu{
+            @apply lg:justify-around;
+        }
     }
 
-    .paco-bottom-menu-whitte {
-        @apply !font-secondary !text-xs !font-normal !text-left;
-
-        ul {
-            @apply !gap-4;
+    .paco__main--terms.paco-bottom-menu-whitte {
+        @apply font-secondary text-xs font-normal text-left relative;
+        &::before{
+            @apply lg:content-[''] bg-white h-px absolute top-0 right-0 w-[151%];
+        }
+        .menu {
+            @apply !gap-4 lg:justify-around lg:border-t-0;
         
             a {
                 @apply !text-white;
             }
-        }
-
-        .menu {
-            @apply !border-white;   
-        }
-        
+        }        
     }
 
     .menu__disclaimer--mobile-view {
