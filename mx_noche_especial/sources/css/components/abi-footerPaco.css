@@ -21,7 +21,9 @@
 
     .paco__subscribe-form-container {
         @apply !font-secondary;
-
+        .subscribe-email{
+            @apply placeholder:text-black;
+        }
         .js-form-submit {
             @apply !bg-primary !font-bold;
         }
