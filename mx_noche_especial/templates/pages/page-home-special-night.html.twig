@@ -20,7 +20,7 @@
       </h2>
     </div>
     {# Floats bottles #}
-    <picture>
+    <picture class="bottle-1">
       <source srcset="{{ abi_optimize_image_to_webp(directory ~ '/sources/images/botella-1-section1-desktop.png')}}" type="image/webp">
       <img
         class="w-[202px] lg:w-auto -z-10 md:z-10 absolute top-7 -left-10 xl:right-1/2"
@@ -29,7 +29,7 @@
         width="202" height="377"
       />
     </picture>
-    <picture>
+    <picture class="bottle-2">
       <source srcset="{{ abi_optimize_image_to_webp(directory ~ '/sources/images/botella-2-section-1-desktop.png')}}" type="image/webp">
       <img
         class="absolute z-10 right-6 top-72 w-[103px] lg:w-auto lg:top-20 xl:right-1/2 xl:translate-x-[275%]"
@@ -39,7 +39,7 @@
         />
     </picture>
 
-    <picture>
+    <picture class="bottle-3">
       <source srcset="{{ abi_optimize_image_to_webp(directory ~ '/sources/images/botella-3-section-1-desktop.png')}}" type="image/webp">
       <img
         class="absolute -top-[5.25rem] -right-7 w-[214px] lg:w-auto lg:left-1/2 xl:translate-x-28 lg:right-0 -z-10"
@@ -203,8 +203,8 @@
             {% endfor %}
           </div>
         </div>
-        <div class="w-1/2 lg:absolute lg:w-[50%] lg:-translate-x-1/2 lg:left-1/2 -top-[30%]">
-          <div class="relative flex flex-col justify-center items-center -mt-[90%] md:mt-0">
+        <div class="section-bottle w-1/2 lg:absolute lg:w-[50%] lg:-translate-x-1/2 lg:left-1/2 -top-[30%]">
+          <div class="bottle relative flex flex-col justify-center items-center -mt-[90%] md:mt-0">
             <div class="relative flex place-content-center place-items-center">
               <picture>
                 <source srcset="{{ abi_optimize_image_to_webp( component.consumption_occasions.image_occasions ) }}" type="image/webp"/>
