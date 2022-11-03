@@ -28,24 +28,24 @@
             @apply !bg-primary !font-bold;
         }
 
-        .js-form-type-checkbox {
-            @apply !flex !items-center !justify-center !gap-4 !my-4;
+         form .js-form-type-checkbox {
+            @apply flex items-center justify-center gap-4 my-4;
 
             label {
-                @apply !text-xs !py-0 !pl-4 !text-left;
+                @apply text-xs py-0 pl-4 text-left font-light;
 
                &:before {
-                    @apply !bg-[url("../../sources/images/checkbox-unchecked.png")] !w-[21px] !h-[20px];
+                    @apply bg-[url("../../sources/images/checkbox-unchecked.png")] w-[21px] h-[20px];
                }
             }
 
             input[type=checkbox]:checked+label:after {
-                @apply !bg-[url("../../sources/images/checkbox-checked.png")] !w-[21px] !h-[20px];
+                @apply bg-[url("../../sources/images/checkbox-checked.png")] w-[21px] h-[20px];
             }
         }
 
-        .js-form-type-checkbox input[type=checkbox]{
-            @apply !w-[16px] !h-[16px];
+        form .js-form-type-checkbox input[type=checkbox]{
+            @apply w-[16px] h-[16px];
         }
     }
 
