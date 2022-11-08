@@ -2,7 +2,7 @@ let mix = require('laravel-mix');
 require('laravel-mix-eslint');
 require('laravel-mix-clean');
 
-const proxy = 'https://mx-modelo-noche-especial.dd:8443/' || null; 
+const proxy = 'https://mx-modelo-noche-especial.dd:8443/' || null;
 
 /*
  |--------------------------------------------------------------------------
