@@ -87,7 +87,7 @@
             'event': 'GAEvent',
             'event_category': 'Age Gate',
             'event_action': 'Interaction',
-            'event_label': 'Send',
+            'event_label': 'Sucessfull',
             'interaction':'False',
             'component_name': 'Entrar',
             'element_text': 'Entrar_Noche_Especial',
